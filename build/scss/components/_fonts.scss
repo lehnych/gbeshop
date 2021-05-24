@@ -1,0 +1,3 @@
+@font-face { @include create-font-face('lato', 'lato/lato-700', $font-weight-bold); }
+@font-face { @include create-font-face('lato', 'lato/lato-300', $font-weight-light); }
+@font-face { @include create-font-face('lato', 'lato/lato-regular', $font-weight-regular); }

@@ -1,0 +1,9 @@
+.healine {
+	text-align: center;
+	
+	h2 {
+		@include font-size(30px);
+		color: $color-black-light;
+		font-weight: $font-weight-regular;
+	}
+}

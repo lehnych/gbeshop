@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Elements</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">content</div>
+</div>
+
+
+<div class="container">
+	<h4>Typo</h4>
+	<section>
+		<h1>H1 Header</h1>
+		<h2>H2 Subheader</h2>
+		<h3>H3 Subsubheader</h3>
+		<h4>H4 Subsubsubheader</h4>
+		<h5>H5 Subsubsubsubheader</h5>
+		<h6>H6 Subsubsubsubsubheader</h6>
+	</section>
+
+	<h4>Copytext</h4>
+	<section>
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam <a href="/">nonumy</a> eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+	</section>
+
+	<h4>UL</h4>
+	<section>
+		<ul>
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ul>
+		<ul class="disc">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ul>
+		<ul class="square">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ul>
+		<ul class="decimal">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ul>
+		<ul class="lower-latin">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ul>
+		<ul class="check">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ul>
+	</section>
+
+	<h4>OL</h4>
+	<section>
+		<ol>
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ol>
+		<ol class="disc">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ol>
+		<ol class="square">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ol>
+		<ol class="decimal">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ol>
+		<ol class="lower-latin">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ol>
+		<ol class="check">
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ol>
+	</section>
+
+
+	<h4>Forms</h4>
+	<section>
+		<form>
+			<div class="form-group">
+				<label for="fieldText">Suchen</label>
+				<div class="comby-field">
+					<input
+							type="text"
+							id="fieldText"
+							placeholder="Textfield"
+							class="form-control"
+					><button type="submit" title="Go">Go</button>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="fieldSearch">Suchen</label>
+				<div class="search-field">
+					<input
+							type="text"
+							id="fieldSearch"
+							placeholder="Suchen"
+							class="form-control"
+					><button type="submit" title="Suche" class="search-button"><img src="img/icons/search.svg"></button>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="fieldText">Type "text"</label>
+				<input
+						type="text"
+						id="fieldText"
+						placeholder="Text"
+						class="form-control"
+				>
+			</div>
+			<div class="form-group">
+				<label for="fieldEmail">Type "email"</label>
+				<input
+						type="email"
+						id="fieldEmail"
+						placeholder="Email-Adresse"
+						class="form-control"
+				>
+			</div>
+			<div class="form-group">
+				<label for="fieldPasswort">Type "password"</label>
+				<input
+						type="password"
+						id="fieldPasswort"
+						placeholder="Passwort"
+						class="form-control"
+				>
+			</div>
+			<div class="form-group">
+				<label>Select</label>
+				<select class="form-control custom-select">
+					<option value="">Select menu</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>Multiple Select</label>
+				<select class="form-control custom-select" multiple="">
+					<option value="">Select options</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>Textfield</label>
+				<textarea
+						rows="5"
+						placeholder="Textfield"
+						class="form-control"
+				></textarea>
+			</div>
+			<div class="form-group--row form-group--row---default">
+				<div class="form-group">
+					<label for="fieldText">Type "text"</label>
+					<input
+							type="text"
+							id="fieldText"
+							placeholder="Text"
+							class="form-control"
+					>
+				</div>
+				<div class="form-group">
+					<label for="fieldText">Type "number"</label>
+					<input
+							type="number"
+							id="fieldMunber"
+							placeholder="Number"
+							class="form-control"
+					>
+				</div>
+			</div>
+			<div class="form-group--row form-group--row---three-col">
+				<div class="form-group">
+					<label for="fieldText">Type "text"</label>
+					<input
+							type="text"
+							id="fieldText"
+							placeholder="Text"
+							class="form-control"
+					>
+				</div>
+				<div class="form-group">
+					<label for="fieldText">Type "text"</label>
+					<input
+							type="text"
+							id="fieldText"
+							placeholder="Text"
+							class="form-control"
+					>
+				</div>
+				<div class="form-group">
+					<label for="fieldText">Type "text"</label>
+					<input
+							type="text"
+							id="fieldText"
+							placeholder="Text"
+							class="form-control"
+					>
+				</div>
+			</div>
+			<div class="form-group--row form-group--row---address">
+				<div class="form-group">
+					<label for="fieldText">Type "text"</label>
+					<input
+							type="text"
+							id="fieldText"
+							placeholder="Text"
+							class="form-control"
+					>
+				</div>
+				<div class="form-group">
+					<label for="fieldText">Type "number"</label>
+					<input
+							type="number"
+							id="fieldMunber"
+							placeholder="Number"
+							class="form-control"
+					>
+				</div>
+			</div>
+			<div class="form-group--row form-group--row---addressrevert">
+				<div class="form-group">
+					<label for="fieldText">Type "number"</label>
+					<input
+							type="number"
+							id="fieldMunber"
+							placeholder="Number"
+							class="form-control"
+					>
+				</div>
+				<div class="form-group">
+					<label for="fieldText">Type "text"</label>
+					<input
+							type="text"
+							id="fieldText"
+							placeholder="Text"
+							class="form-control"
+					>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Type "file"</label>
+				<div class="custom-file">
+					<input
+							type="file"
+							id="customFile"
+							lang="en"
+							class="custom-file-input"
+							required=""
+					>
+					<label class="custom-file-label" for="customFile"></label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="custom-control custom-checkbox">
+					<input
+							type="checkbox"
+							id="customCheck1"
+							class="custom-control-input"
+					>
+					<label for="customCheck1" class="custom-control-label">Check this custom checkbox</label>
+				</div>
+				<div class="custom-control custom-checkbox">
+					<input
+							type="checkbox"
+							id="customCheck2"
+							class="custom-control-input"
+					>
+					<label for="customCheck2" class="custom-control-label">Check this custom checkbox</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="custom-control custom-radio">
+					<input
+							type="radio"
+							id="customRadio1"
+							name="customRadio"
+							class="custom-control-input"
+					>
+					<label for="customRadio1" class="custom-control-label">Toggle this custom radio</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input
+							type="radio"
+							id="customRadio2"
+							name="customRadio"
+							class="custom-control-input"
+					>
+					<label for="customRadio2" class="custom-control-label">Or toggle this other custom radio</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="form-label-group">
+					<input
+							type="text"
+							id="fieldText"
+							placeholder="Text"
+							class="form-control"
+					>
+					<label for="fieldText">Type "text"</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="form-label-group comby-field">
+					<input
+							type="text"
+							id="fieldText"
+							placeholder="Text"
+							class="form-control"
+					>
+					<label for="fieldText">Type "text"</label>
+					<button type="submit" title="Go">Go</button>
+				</div>
+			</div>
+
+		</form>
+	</section>
+
+
+	<h4>Buttons</h4>
+	<section>
+		<div class="buttons-set">
+			<button class="btn primary">Button</button> <button class="btn primary--negative">Button</button>
+		</div>
+		<div class="buttons-set">
+			<button class="btn ghost">Button</button> <button class="btn ghost--negative">Button</button>
+		</div>
+	</section>
+
+
+
+	<h4>Product Grid</h4>
+	<section class="product-grid row">
+		<div class="product-item">
+			<div class="product-item--wrapper">
+				<div class="product-item--picture">
+					<a href="produckt.html" title="Product">
+						<span class="btn ghost--negative transparent"><img src="img/icons/cart.svg" alt="">Add to Cart</span>
+					</a>
+					<picture>
+						<img src="img/product/product-m-01-thumb.jpg" alt="Product 01" class="img-fluid">
+					</picture>
+				</div>
+				<div class="product-item--body">
+					<div class="product-item--decription">
+						<h4>Ellery X M'O Capsule</h4>
+						<p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+					</div>
+					<div class="product-item--price">
+						$52.00
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-item">
+			<div class="product-item--wrapper">
+				<div class="product-item--picture">
+					<a href="produckt.html" title="Product">
+						<span class="btn ghost--negative transparent"><img src="img/icons/cart.svg" alt="">Add to Cart</span>
+					</a>
+					<picture>
+						<img src="img/product/product-m-02-thumb.jpg" alt="Product 02" class="img-fluid">
+					</picture>
+				</div>
+				<div class="product-item--body">
+					<div class="product-item--decription">
+						<h4>Ellery X M'O Capsule</h4>
+						<p>Known for her sculptural takes on traditional tailoring</p>
+					</div>
+					<div class="product-item--price">
+						$52.00
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-item">
+			<div class="product-item--wrapper">
+				<div class="product-item--picture">
+					<a href="produckt.html" title="Product">
+						<span class="btn ghost--negative transparent"><img src="img/icons/cart.svg" alt="">Add to Cart</span>
+					</a>
+					<picture>
+						<img src="img/product/product-m-03-thumb.jpg" alt="Product 03" class="img-fluid">
+					</picture>
+				</div>
+				<div class="product-item--body">
+					<div class="product-item--decription">
+						<h4>Ellery X M'O Capsule</h4>
+						<p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+					</div>
+					<div class="product-item--price">
+						$52.00
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-item">
+			<div class="product-item--wrapper">
+				<div class="product-item--picture">
+					<a href="produckt.html" title="Product">
+						<span class="btn ghost--negative transparent"><img src="img/icons/cart.svg" alt="">Add to Cart</span>
+					</a>
+					<picture>
+						<img src="img/product/product-m-04-thumb.jpg" alt="Product 04" class="img-fluid">
+					</picture>
+				</div>
+				<div class="product-item--body">
+					<div class="product-item--decription">
+						<h4>Ellery X M'O Capsule</h4>
+						<p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+					</div>
+					<div class="product-item--price">
+						$52.00
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-item">
+			<div class="product-item--wrapper">
+				<div class="product-item--picture">
+					<a href="produckt.html" title="Product">
+						<span class="btn ghost--negative transparent"><img src="img/icons/cart.svg" alt="">Add to Cart</span>
+					</a>
+					<picture>
+						<img src="img/product/product-m-05-thumb.jpg" alt="Product 05" class="img-fluid">
+					</picture>
+				</div>
+				<div class="product-item--body">
+					<div class="product-item--decription">
+						<h4>Ellery X M'O Capsule</h4>
+						<p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+					</div>
+					<div class="product-item--price">
+						$52.00
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-item">
+			<div class="product-item--wrapper">
+				<div class="product-item--picture">
+					<a href="produckt.html" title="Product">
+						<span class="btn ghost--negative transparent"><img src="img/icons/cart.svg" alt="">Add to Cart</span>
+					</a>
+					<picture>
+						<img src="img/product/product-m-06-thumb.jpg" alt="Product 06" class="img-fluid">
+					</picture>
+				</div>
+				<div class="product-item--body">
+					<div class="product-item--decription">
+						<h4>Ellery X M'O Capsule</h4>
+						<p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+					</div>
+					<div class="product-item--price">
+						$52.00
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<script type="text/javascript" src="js/script.min.js"></script>
+</body>
+</html>

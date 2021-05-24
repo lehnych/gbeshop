@@ -1,0 +1,95 @@
+// Breakpoints
+$grid-breakpoints: (
+	// Extra small screen / phone
+	xs: 0,
+	// mobile landscape
+	ms: 568px,
+	// tablet portrait
+	sm: 768px,
+	// tablet landscape
+	md: 1024px,
+	// desktop
+	lg: 1200px,
+	// desktop large
+	xl: 1920px
+);
+
+// Colors
+$color-black: #000000;
+$color-black-light: #222222;
+$color-white: #ffffff;
+$color-red: #cf1a43;
+$color-rose: #f16d7f;
+$color-green: #6aa029;
+$color-yellow: #f0c000;
+$color-gray: #5d5d5d;
+$color-gray-light: #f8f8f8;
+$color-gray-dark: #222222;
+
+$border-color: #a4a4a4;
+
+$body-bg: $color-white;
+$footer-bg: #f4f4f4;
+$intro-bg: #f1e4e6;
+
+$text-color: $color-gray;
+$link-color: $color-gray;
+
+$color-error: $color-red;
+$color-success: $color-green;
+
+$form-background-color: #e1e1e1;
+$form-border-color: $border-color;
+$form-text-color: $color-black-light;
+$form-placeholder-color: #b1b1b1;
+
+$button-primary-background-color: $color-rose;
+$button-primary-border-color: $color-rose;
+$button-primary-text-color: $color-white;
+$button-primary-hover-background-color: $color-white;
+$button-primary-hover-border-color: $color-rose;
+$button-primary-hover-text-color: $color-rose;
+
+$button-primary-negative-background-color: $color-white;
+$button-primary-negative-border-color: $color-rose;
+$button-primary-negative-text-color: $color-rose;
+$button-primary-negative-hover-background-color: $color-rose;
+$button-primary-negative-hover-border-color: $color-rose;
+$button-primary-negative-hover-text-color: $color-white;
+
+$button-ghost-background-color: $color-white;
+$button-ghost-border-color: $border-color;
+$button-ghost-text-color: $color-gray;
+
+$button-ghost-negative-background-color: $border-color;
+$button-ghost-negative-border-color: $color-white;
+$button-ghost-negative-text-color: $color-white;
+
+// Typography
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 20px;
+
+$font-family-base: ('lato', sans-serif);
+$font-size-base: 0.875rem;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$line-height-base: 1.5 !default;
+
+$font-size-h1: 32px;
+$font-size-h2: 24px;
+$font-size-h3: $font-size-xl;
+$font-size-h4: 18px;
+$font-size-h5: 14px;
+$font-size-h6: 12px;
+
+// Spacing
+$base-spacing-xs: 5px;
+$base-spacing-ms: 10px;
+$base-spacing-sm: 15px;
+$base-spacing-md: 20px;
+$base-spacing-lg: 40px;
+$base-spacing-xl: 50px;

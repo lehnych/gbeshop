@@ -1,0 +1,55 @@
+header {
+	padding: $base-spacing-sm 0;
+	background: $color-black-light;
+	
+	img {
+		display: block;
+	}
+	
+	.header {
+		
+		&--wrapper {
+			@include flexbox;
+			@include align-items(center);
+			@include justify-content(space-between);
+		}
+		
+		&--col {
+			@include flexbox;
+			@include align-items(center);
+			
+			> *:not(:first-child) {
+				margin-left: $base-spacing-sm * 2;
+			}
+			
+			
+			.user {
+				@include media-breakpoint-down(ms) {
+					display: none;
+				}
+			}
+			
+			.basket {
+				@include media-breakpoint-down(ms) {
+					display: none;
+				}
+				@include position-relative;
+				
+				&--count {
+					@include flexbox;
+					@include align-items(center);
+					@include justify-content(center);
+					@include font-size($font-size-xs);
+					@include position-absolute(-9px, -9px, auto, auto);
+					width: 18px;
+					height: 18px;
+					background: $color-rose;
+					border-radius: 50%;
+					color: $color-white;
+					text-align: center;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
