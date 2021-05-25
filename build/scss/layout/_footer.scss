@@ -97,18 +97,20 @@ footer {
 						margin-top: $base-spacing-sm * 2;
 						margin-bottom: 0;
 						
-						.comby-field {
+						&.comby-field {
 							position: relative;
 							
-							> label {
+							label {
 								color: $form-text-color;
+								padding-left: $base-spacing-md;
 							}
 							
 							input {
-								padding-right: 90px;
+								padding-left: $base-spacing-md;
 								background: $form-background-color;
 								border: none;
-								border-radius: 22.5px;
+								border-top-left-radius: 22.5px;
+								border-bottom-left-radius: 22.5px;
 							}
 							
 							button {
