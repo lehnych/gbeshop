@@ -19,13 +19,13 @@ textarea,
 	@include font-size($font-size-s);
 	width: 100%;
 	padding: 0 $base-spacing-ms;
-	outline: none;
+	/*outline: none;*/
 	border: 1px solid $form-border-color;
 	font-weight: $font-weight-light;
 	color: $form-text-color;
 	
 	&::placeholder {
-		color: $form-placeholder-color;
+		color: $form-text-color;
 	}
 	
 	&.invalid-field {
@@ -63,13 +63,6 @@ input {
 
 textarea {
 	padding: $base-spacing-ms !important;
-}
-
-.form-control {
-
-	&:focus {
-		border-color: $form-border-color;
-	}
 }
 
 .form-group--row {
@@ -150,6 +143,11 @@ textarea {
 		}
 	}
 	
+	> label {
+		margin-bottom: $base-spacing-xs;
+		display: block;
+	}
+	
 	.search-field {
 		position: relative;
 		
@@ -176,28 +174,6 @@ textarea {
 		}
 	}
 	
-	.comby-field {
-		position: relative;
-		
-		input {
-			padding-right:45px;
-		}
-		
-		button {
-			@include font-size($font-size-s);
-			@include position-absolute(0, 0, 0, auto);
-			height: 45px;
-			padding: 0 $base-spacing-sm;
-			display: block;
-			background: none;
-			border: none;
-			border-left: 1px solid $form-border-color;
-			color: $form-text-color;
-			line-height: 43px;
-			z-index: 1;
-		}
-	}
-	
 	.custom-select {
 		display: inline-block;
 		font-weight: $font-weight-regular;
@@ -220,31 +196,6 @@ textarea {
 		height: 45px;
 		display: inline-block;
 		
-		.custom-file-label {
-			@include appearance;
-			@include font-size($font-size-s);
-			@include position-absolute(0, 0, auto, 0);
-			width: 100%;
-			height: 45px;
-			margin-bottom: 0;
-			padding: 0 $base-spacing-ms;
-			background: $color-white;
-			border: 1px solid $form-border-color;
-			box-shadow: none;
-			font-weight: $font-weight-light;
-			color: $form-placeholder-color;
-			line-height: 43px;
-			z-index: 1;
-			
-			&.has-file {
-				color: $form-text-color !important;
-				
-				&:before {
-					content: '' !important;
-				}
-			}
-		}
-		
 		.custom-file-input {
 			
 			~ .custom-file-label {
@@ -255,7 +206,7 @@ textarea {
 					height: 45px;
 					padding: 0 $base-spacing-sm;
 					display: block;
-					color: $form-placeholder-color;;
+					color: $form-text-color;;
 					line-height: 43px;
 					z-index: 3;
 				}
@@ -315,6 +266,38 @@ textarea {
 					}
 				}
 			}
+			
+			&:focus {
+				
+				+ .custom-file-label {
+					border: 1px solid $color-yellow;
+				}
+			}
+		}
+		
+		.custom-file-label {
+			@include appearance;
+			@include font-size($font-size-s);
+			@include position-absolute(0, 0, auto, 0);
+			width: 100%;
+			height: 45px;
+			margin-bottom: 0;
+			padding: 0 $base-spacing-ms;
+			background: $color-white;
+			border: 1px solid $form-border-color;
+			box-shadow: none;
+			font-weight: $font-weight-light;
+			color: $form-text-color;
+			line-height: 43px;
+			z-index: 1;
+			
+			&.has-file {
+				color: $form-text-color !important;
+				
+				&:before {
+					content: '' !important;
+				}
+			}
 		}
 	}
 	
@@ -349,6 +332,16 @@ textarea {
 						color: $form-text-color;
 					}
 				}
+				
+				&:focus {
+					
+					+ .custom-control-label {
+						
+						&:before {
+							border: 1px solid $color-yellow;
+						}
+					}
+				}
 			}
 			
 			.custom-control-label {
@@ -377,6 +370,13 @@ textarea {
 					content: '';
 					display: block;
 					background: no-repeat 50% / 50% 50%;
+				}
+				
+				&:focus {
+					
+					&:before {
+						border: 1px solid $color-yellow;
+					}
 				}
 				
 				&.invalid-field {
@@ -439,6 +439,31 @@ textarea {
 		}
 	}
 	
+	.comby-field,
+	&.comby-field {
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(flex-end);
+		
+		> * {
+			@include flex-grow(1);
+		}
+		
+		button {
+			@include flex-grow(0);
+			@include flex-shrink(1);
+			@include font-size($font-size-s);
+			height: 45px;
+			padding: 0 $base-spacing-sm;
+			display: block;
+			background: none;
+			border: 1px solid $form-border-color;
+			border-left: none;
+			color: $form-text-color;
+			line-height: 43px;
+		}
+	}
+	
 	&.text-danger {
 		
 		input[type=text],
@@ -487,7 +512,7 @@ textarea {
 		transition: all .1s ease-in-out;
 		overflow: hidden;
 		border: 1px solid transparent;
-		color: $form-placeholder-color;
+		color: $form-text-color;
 		line-height: 43px;
 		position: absolute;
 	}
@@ -517,13 +542,13 @@ textarea {
 		
 		&:not(:placeholder-shown) {
 			padding-top: $base-spacing-sm + 3 !important;
-			padding-bottom: $base-spacing-xs - 2;
+			padding-bottom: $base-spacing-xs;
 			color: $form-text-color;
 			
 			~ label {
 				@include font-size($font-size-xs);
 				margin: 0;
-				padding-top: $base-spacing-xs - 2;
+				padding-top: $base-spacing-xs;
 				padding-bottom: $base-spacing-sm;
 				color: $form-placeholder-color;
 				line-height: inherit;
@@ -537,3 +562,30 @@ button {
 	touch-action: manipulation;
 	-ms-touch-action: manipulation;
 }
+
+input[type=text],
+input[type=number],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=datetime-local],
+input[type=tel],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
+input[type=file],
+select,
+select[multiple],
+select[size],
+textarea,
+button,
+.form-control {
+	
+	&:focus {
+		outline: none;
+		border: 1px solid $color-yellow !important;
+	}
+}
+
+
