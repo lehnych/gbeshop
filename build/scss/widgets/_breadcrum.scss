@@ -39,6 +39,10 @@
 			
 			a {
 				
+				&:hover {
+					color: $color-rose;
+				}
+				
 				&.active {
 					font-weight: $font-weight-bold;
 					color: $color-rose;
