@@ -350,6 +350,7 @@ textarea {
 				@include position-relative;
 				padding-left: 30px;
 				color: $form-text-color;
+				line-height: 20px;
 				vertical-align: top;
 				
 				&:before {

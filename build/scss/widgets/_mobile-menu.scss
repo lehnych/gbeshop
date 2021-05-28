@@ -1,7 +1,7 @@
 #mobile-menu-bar {
 	@include box-shadow(6px 4px 35px rgba($color-black, 0.2));
-	@include transition(all 0.3s);
-	@include position(fixed, 0, -280px, auto, auto);
+	@include transition(all 0.8s);
+	@include position(fixed, 0, -315px, auto, auto);
 	width: 280px;
 	height: 100%;
 	background: $color-white;
