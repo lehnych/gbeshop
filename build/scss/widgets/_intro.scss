@@ -6,7 +6,6 @@
 		@include calc(height, #{'100vh - 68px'});
 		aspect-ratio: inherit;
 	}
-	margin-bottom: $base-spacing-sm * 3;
 	aspect-ratio: 1 / 1;
 	background-color: $intro-bg;
 	
