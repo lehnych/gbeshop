@@ -1,0 +1,54 @@
+.pagination {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(space-between);
+	max-width: 290px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid $border-color-light;
+	border-radius: 3px;
+	
+	a {
+		@include position-relative;
+		min-height: 15px;
+		padding: $base-spacing-sm $base-spacing-ms;
+		line-height: 15px;
+		
+		&:first-child,
+		&:last-child {
+			padding: $base-spacing-sm;
+			text-indent: -99999px;
+			
+			&:after {
+				@include position(absolute, 0, 0, auto, auto);
+				width: 10px;
+				height: 10px;
+				content: '';
+				display: inline-block;
+				border-style: solid;
+				border-width: 2px 2px 0 0;
+				vertical-align: top;
+			}
+		}
+		
+		&:first-child {
+			
+			&:after {
+				@include position(absolute, 50%, auto, auto, 50%);
+				@include transform(rotate(225deg));
+				margin-top:-5px;
+				/*margin-left:-5px;*/
+			}
+		}
+		
+		&:last-child {
+			
+			&:after {
+				@include position(absolute, 50%, 50%, auto, auto);
+				@include transform(rotate(45deg));
+				margin-top:-5px;
+				/*margin-right:-5px;*/
+			}
+		}
+	}
+}
