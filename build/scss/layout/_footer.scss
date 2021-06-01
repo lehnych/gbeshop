@@ -27,7 +27,7 @@ footer {
 			}
 		}
 		
-		&--top {
+		&--benefits {
 			@include media-breakpoint-up(sm) {
 				padding: $base-spacing-xl * 2 0;
 			}
@@ -35,7 +35,7 @@ footer {
 			color: $color-white;
 		}
 		
-		&--middle {
+		&--subscribe {
 			padding: $base-spacing-xl + 20px 0;
 			background: $footer-bg url("../img/footer-bg.jpg") no-repeat bottom left;
 			background-size: cover;
@@ -126,7 +126,7 @@ footer {
 			}
 		}
 		
-		&--bottom {
+		&--copiright {
 			padding: $base-spacing-md 0;
 			color: $color-white;
 			

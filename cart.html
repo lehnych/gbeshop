@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Shopping cart</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.min.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<div class="header--wrapper">
+				<div class="header--col">
+					<div class="logo">
+						<a href="index.html" title="Shop"><img src="img/logo.png" alt="Shop"></a>
+					</div>
+					<div class="search">
+						<img src="img/icons/search.svg" alt="Search" class="icon">
+					</div>
+				</div>
+				<div class="header--col">
+					<div class="menu">
+						<img src="img/icons/bars.svg" alt="Menu" id="mobile-menu-icon" class="icon">
+					</div>
+					<div class="user">
+						<img src="img/icons/user.svg" alt="My Account">
+					</div>
+					<div class="basket">
+						<a href="cart.html" title="My Basket">
+							<div class="basket--count">5</div>
+							<img src="img/icons/cart.svg" alt="Cart" class="icon">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<main>
+		<section class="breadcrumb">
+			<div class="container breadcrumb--wrapper">
+				<h1>Shopping cart</h1>
+			</div>
+		</section>
+
+		<div class="main--wrapper container">
+
+			<section class="cart">
+
+				<form id="cart-form" action="" method="post" class="cart--wrapper">
+
+					<div class="cart-information">
+						<section class="product-grid mode-list">
+							<div class="product-item">
+								<div class="product-item--wrapper">
+									<div class="product-item--picture">
+										<picture>
+											<img src="img/product/product-m-03-thumb.jpg" alt="Product 03" class="img-fluid">
+										</picture>
+									</div>
+									<div class="product-item--body">
+										<div class="product-item--decription">
+											<h4><a href="product.html" title="Product">Ellery X M'O Capsule</a><a href="#" title="Delete Product fron cart" class="product-item--delete"><img src="img/icons/close.svg" alt="delete"></a></h4>
+											<p class="product-option--color">Color: red</p>
+											<p class="product-option--size">Size: XL</p>
+											<p class="product-option--quantity">Quantity: <span class="quantity-field"><span data-quantity="minus" data-field="quantity-p-01" class="quantity-field--minus">-</span><input type="text" id="fieldQuantity01" name="quantity-p-01" min="1" max="5" value="2" class="form-control"><span  data-quantity="plus" data-field="quantity-p-01" class="quantity-field--plus">+</span></span></p>
+										</div>
+
+										<div class="product-item--price">
+											$104.00
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-item">
+								<div class="product-item--wrapper">
+									<div class="product-item--picture">
+										<picture>
+											<img src="img/product/product-m-02-thumb.jpg" alt="Product 03" class="img-fluid">
+										</picture>
+									</div>
+									<div class="product-item--body">
+										<div class="product-item--decription">
+											<h4><a href="product.html" title="Product">Ellery X M'O Capsule</a><a href="#" title="Delete Product fron cart" class="product-item--delete"><img src="img/icons/close.svg" alt="delete"></a></h4>
+											<p class="product-option--color">Color: red</p>
+											<p class="product-option--size">Size: XL</p>
+											<p class="product-option--quantity">Quantity: <span class="quantity-field"><span data-quantity="minus" data-field="quantity-p-02" class="quantity-field--minus">-</span><input type="text" id="fieldQuantity02" name="quantity-p-02" min="1" max="5" value="2" class="form-control"><span  data-quantity="plus" data-field="quantity-p-02" class="quantity-field--plus">+</span></span></p>
+										</div>
+										<div class="product-item--price">
+											$104.00
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="button-set">
+							<a class="btn ghost">Clear shopping cart</a>
+							<a class="btn ghost">Continue shopping</a>
+						</section>
+					</div>
+
+
+					<div class="payment-information">
+						<section class="shipping-address">
+							shipping-address
+						</section>
+
+						<section class="basket-total">
+							shipping-address
+						</section>
+					</div>
+				</form>
+
+			</section>
+
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer--benefits">
+			<div class="container">
+				<div class="cta-grid row">
+					<div class="cta-item">
+						<div class="cta-item--wrapper">
+							<div class="cta-item--picture">
+								<img src="img/icons/truck.svg" alt="Free Delivery">
+							</div>
+							<div class="cta-item--body">
+								<div class="cta-item--decription">
+									<h4>Free Delivery</h4>
+									<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cta-item">
+						<div class="cta-item--wrapper">
+							<div class="cta-item--picture">
+								<img src="img/icons/discount.svg" alt="Sales & Discounts">
+							</div>
+							<div class="cta-item--body">
+								<div class="cta-item--decription">
+									<h4>Sales & discounts</h4>
+									<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cta-item">
+						<div class="cta-item--wrapper">
+							<div class="cta-item--picture">
+								<img src="img/icons/crown.svg" alt="Quality Assurance">
+							</div>
+							<div class="cta-item--body">
+								<div class="cta-item--decription">
+									<h4>Quality assurance</h4>
+									<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer--subscribe">
+			<div class="container">
+				<div class="footer--wrapper">
+					<div class="footer--col">
+						<div class="review">
+							<img src="img/person.jpg" alt="Person">
+							<blockquote>
+								"Vestibulum quis porttitor dui! Quisque viverra nunc mi, <i>a pulvinar purus condimentum</i>"
+							</blockquote>
+						</div>
+					</div>
+					<div class="footer--col">
+						<div class="nl-subscribe">
+							<h3>Subscribe</h3>
+							<h4>For our Newsletter and promotion</h4>
+							<form action="" role="form" method="post">
+								<div class="form-group comby-field">
+									<div class="form-label-group">
+										<input
+												type="email"
+												id="email"
+												placeholder="Enter Your Email"
+												class="form-control"
+												required
+										>
+										<label for="email">Enter Your Email</label>
+									</div>
+									<button type="submit" title="Subscribe">Subscribe</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer--copiright">
+			<div class="container">
+				<div class="footer--wrapper">
+					<div class="footer--col">
+						<p>© 2021  Brand  All Rights Reserved.</p>
+					</div>
+					<div class="footer--col">
+						<a href="#" title="Facebook" class="icon"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" title="Instagram" class="icon"><i class="fab fa-instagram"></i></a>
+						<a href="#" title="Pinterest" class="icon"><i class="fab fa-pinterest-p"></i></a>
+						<a href="#" title="Twitter" class="icon"><i class="fab fa-twitter"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Mobile Menu -->
+	<nav id="mobile-menu-bar">
+		<div id="mobile-menu-header">
+			<span>Menu</span><img src="img/icons/times.svg" alt="Close">
+		</div>
+		<ul id="mobile-menu">
+			<li class="level-1">
+				<a href="#" title="Herren">Men</a>
+				<ul>
+					<li class="level-2">
+						<a href="#" title="Accessories">Accessories</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="Bags">Bags</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="Denim">Denim</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="T-Shirts">T-Shirts</a>
+					</li>
+				</ul>
+			</li>
+			<li class="level-1">
+				<a href="#" title="Herren">Woman</a>
+				<ul>
+					<li class="level-2">
+						<a href="#" title="Accessories">Accessories</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="Jackets & Coats">Jackets & Coats</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="Polos">Polos</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="T-Shirts">T-Shirts</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="Shirts">Shirts</a>
+					</li>
+				</ul>
+			</li>
+			<li class="level-1">
+				<a href="#" title="Herren">Kids</a>
+				<ul>
+					<li class="level-2">
+						<a href="#" title="Accessories">Accessories</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="Jackets & Coats">Jackets & Coats</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="Polos">Polos</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="T-Shirts">T-Shirts</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="Shirts">Shirts</a>
+					</li>
+					<li class="level-2">
+						<a href="#" title="Bags">Bags</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+
+<script type="text/javascript" src="js/script.min.js"></script>
+</body>
+</html>

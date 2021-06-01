@@ -51,4 +51,24 @@ $(document).ready(function() {
             $(".filter-primary--item---content").fadeToggle();
         });
     });
+
+    /* Cart*/
+    $('[data-quantity="plus"]').click(function(e){
+        e.preventDefault();
+        fieldName = $(this).attr('data-field');
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        var currentMaxVal = parseInt($('input[name='+fieldName+']').attr('max'));
+        if (!isNaN(currentVal) && currentVal < currentMaxVal) {
+            $('input[name='+fieldName+']').val(currentVal + 1);
+        }
+    });
+    $('[data-quantity="minus"]').click(function(e) {
+        e.preventDefault();
+        fieldName = $(this).attr('data-field');
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        var currentMinVal = parseInt($('input[name='+fieldName+']').attr('min'));
+        if (!isNaN(currentVal) && currentVal > currentMinVal) {
+            $('input[name='+fieldName+']').val(currentVal - 1);
+        }
+    });
 });

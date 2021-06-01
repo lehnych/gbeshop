@@ -29,3 +29,39 @@
 		padding-right: $base-spacing-sm;
 	}
 }
+
+.product-grid {
+	
+	&.mode-grid  {
+		
+		.product-item {
+			@include media-breakpoint-up(ms) {
+				@include calc(width, #{'100% / 2'});
+			}
+			@include media-breakpoint-up(md) {
+				@include calc(width, #{'100% / 3'});
+			}
+			
+			&:nth-child(odd) {
+				@include media-breakpoint-between(ms, md) {
+					padding-right: $base-spacing-sm / 2;
+				}
+			}
+			
+			&:nth-child(even) {
+				@include media-breakpoint-between(ms, md) {
+					padding-left: $base-spacing-sm / 2;
+				}
+			}
+		}
+	}
+	
+	&.mode-list {
+		
+		.product-item {
+			@include media-breakpoint-up(md) {
+				@include calc(width, #{'100% / 2'});
+			}
+		}
+	}
+}
