@@ -1,1 +1,31 @@
-
+.categorie-options {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(space-between);
+	@include position-relative;
+	@include media-breakpoint-up(md) {
+		@include justify-content(flex-start);
+	}
+	
+	.filter-primary {
+		@include media-breakpoint-up(ms) {
+			padding-right: $base-spacing-sm;
+		}
+		@include media-breakpoint-up(md) {
+			@include flex-grow(0);
+			@include flex-shrink(0);
+			@include calc(flex-basis, #{'100% / 3'});
+		}
+		padding-left: $base-spacing-sm;
+	}
+	
+	.filter-secondary {
+		@include flexbox;
+		@include align-items(center);
+		@include media-breakpoint-up(md) {
+			@include flex(1 0 auto);
+			padding-left: $base-spacing-sm;
+		}
+		padding-right: $base-spacing-sm;
+	}
+}
