@@ -52,7 +52,7 @@
 
 			<section class="cart">
 
-				<form id="cart-form" action="" method="post" class="cart--wrapper">
+				<div class="cart--wrapper">
 
 					<div class="cart-information">
 						<section class="product-grid mode-list">
@@ -68,7 +68,7 @@
 											<h4><a href="product.html" title="Product">Ellery X M'O Capsule</a><a href="#" title="Delete Product fron cart" class="product-item--delete"><img src="img/icons/close.svg" alt="delete"></a></h4>
 											<p class="product-option--color">Color: red</p>
 											<p class="product-option--size">Size: XL</p>
-											<p class="product-option--quantity">Quantity: <span class="quantity-field"><span data-quantity="minus" data-field="quantity-p-01" class="quantity-field--minus">-</span><input type="text" id="fieldQuantity01" name="quantity-p-01" min="1" max="5" value="2" class="form-control"><span  data-quantity="plus" data-field="quantity-p-01" class="quantity-field--plus">+</span></span></p>
+											<p class="product-option--quantity">Quantity: <span class="quantity-field"><span data-quantity="minus" data-field="quantity-p-01" class="quantity-field--minus">-</span><input type="text" id="fieldQuantity01" name="quantity-p-01" min="1" max="5" value="2" class="form-control"><span data-quantity="plus" data-field="quantity-p-01" class="quantity-field--plus">+</span></span></p>
 										</div>
 
 										<div class="product-item--price">
@@ -89,7 +89,7 @@
 											<h4><a href="product.html" title="Product">Ellery X M'O Capsule</a><a href="#" title="Delete Product fron cart" class="product-item--delete"><img src="img/icons/close.svg" alt="delete"></a></h4>
 											<p class="product-option--color">Color: red</p>
 											<p class="product-option--size">Size: XL</p>
-											<p class="product-option--quantity">Quantity: <span class="quantity-field"><span data-quantity="minus" data-field="quantity-p-02" class="quantity-field--minus">-</span><input type="text" id="fieldQuantity02" name="quantity-p-02" min="1" max="5" value="2" class="form-control"><span  data-quantity="plus" data-field="quantity-p-02" class="quantity-field--plus">+</span></span></p>
+											<p class="product-option--quantity">Quantity: <span class="quantity-field"><span data-quantity="minus" data-field="quantity-p-02" class="quantity-field--minus">-</span><input type="text" id="fieldQuantity02" name="quantity-p-02" min="1" max="5" value="2" class="form-control"><span data-quantity="plus" data-field="quantity-p-02" class="quantity-field--plus">+</span></span></p>
 										</div>
 										<div class="product-item--price">
 											$104.00
@@ -108,14 +108,157 @@
 
 					<div class="payment-information">
 						<section class="shipping-address">
-							shipping-address
+							<h3>Shipping address</h3>
+							<div class="shipping-address--form">
+								<form id="shipping-address-form" action="" method="post">
+									<div class="form-group--row form-group--row---default">
+										<div class="form-group">
+											<div class="form-label-group">
+												<input
+														type="text"
+														id="firstName"
+														name ="firstName"
+														placeholder="First Name"
+														class="form-control"
+														required
+												>
+												<label for="firstName">First Name</label>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="form-label-group">
+												<input
+														type="text"
+														id="lastName"
+														name="lastName"
+														placeholder="Last Name"
+														class="form-control"
+														required
+												>
+												<label for="lastName">Last Name</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="form-label-group">
+											<input
+													type="email"
+													id="email"
+													name="email"
+													placeholder="E-mail"
+													class="form-control"
+													required
+											>
+											<label for="email">E-mail</label>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="form-label-group">
+											<input
+													type="tel"
+													id="tel"
+													name="tel"
+													placeholder="Phone"
+													class="form-control"
+													required
+											>
+											<label for="tel">Phone</label>
+										</div>
+									</div>
+
+
+									<div class="form-group--row form-group--row---default">
+										<div class="form-group">
+											<div class="form-label-group">
+												<input
+														type="text"
+														id="street"
+														name="streer"
+														placeholder="Street"
+														class="form-control"
+														required
+												>
+												<label for="street">Street</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-label-group">
+												<input
+														type="text"
+														id="housenr"
+														name="housenr"
+														placeholder="House Nr."
+														class="form-control"
+														required
+												>
+												<label for="housenr">House Nr.</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group--row form-group--row---default">
+										<div class="form-group">
+											<div class="form-label-group">
+												<input
+														type="text"
+														id="city"
+														name="city"
+														placeholder="City"
+														class="form-control"
+														required
+												>
+												<label for="city">City</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-label-group">
+												<input
+														type="text"
+														id="zip"
+														name="zip"
+														placeholder="Zip"
+														class="form-control"
+														required
+												>
+												<label for="zip">Zip</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<select class="form-control custom-select" required>
+											<option value="" disabled>Country</option>
+											<option value="1">Germany</option>
+											<option value="2" selected>Russia</option>
+											<option value="3">USA</option>
+										</select>
+									</div>
+
+									<button type="submit" class="btn ghost">Get a qute</button>
+								</form>
+							</div>
 						</section>
 
 						<section class="basket-total">
-							shipping-address
+
+							<div class="basket-total--wrapper">
+								<div class="basket-total--item">
+									<span>Sub total</span> <span>$900</span>
+								</div>
+								<div class="basket-total--item grand-total">
+									<span>Grand total</span> <span>$900</span>
+								</div>
+								<hr>
+								<form>
+									<button type="submit" class="btn primary">Proceed to Checkout</button>
+								</form>
+							</div>
 						</section>
 					</div>
-				</form>
+				</div>
 
 			</section>
 
@@ -189,12 +332,13 @@
 									<div class="form-label-group">
 										<input
 												type="email"
-												id="email"
+												id="nlemail"
+												name="nlemail"
 												placeholder="Enter Your Email"
 												class="form-control"
 												required
 										>
-										<label for="email">Enter Your Email</label>
+										<label for="nlemail">Enter Your Email</label>
 									</div>
 									<button type="submit" title="Subscribe">Subscribe</button>
 								</div>
