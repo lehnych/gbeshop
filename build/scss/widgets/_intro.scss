@@ -9,7 +9,7 @@
 	aspect-ratio: 1 / 1;
 	background-color: $intro-bg;
 	
-	&--wrapper {
+	&__wrapper {
 		@include flexbox;
 		@include align-items(center);
 		@include justify-content(center);
@@ -20,7 +20,7 @@
 		overflow: hidden;
 	}
 	
-	&--header {
+	&__header {
 		@include font-size(38px);
 		@include media-breakpoint-up(sm) {
 			@include font-size(44px);
@@ -29,37 +29,38 @@
 			@include font-size(48px);
 		}
 		margin-bottom: 0;
-		padding-bottom: $base-spacing-xs;
-		padding-left: $base-spacing-sm;
+		padding-bottom: $base-spacing;
+		padding-left: $base-spacing-xs;
 		order: 1;
-		border-left: 10px solid $color-rose;
-		color: $color-black-light;
+		border-left: 10px solid $deco-color;
+		color: $intro-text-color;
 		line-height: 46px;
 		text-transform: uppercase;
 		
 		> span {
-			@include font-size($font-size-h3);
+			@include font-size($font-size-xl);
 			@include media-breakpoint-up(sm) {
-				@include font-size($font-size-h2);
+				@include font-size($font-size-xxxl);
 			}
 			@include media-breakpoint-up(md) {
-				@include font-size($font-size-h1);
+				@include font-size(32px);
 			}
+			margin-top: $base-spacing;
 			display: block;
 			line-height: 100%;
 			
 			span {
-				color: $color-rose;
+				color: $deco-color;
 			}
 		}
 	}
 	
-	&--img {
+	&__img {
 		@include media-breakpoint-down(ms) {
 			display: none;
 		}
 		height: 100%;
-		padding-top: $base-spacing-sm * 2;
+		padding-top: $base-spacing-sm;
 		order: 0;
 		
 		img {

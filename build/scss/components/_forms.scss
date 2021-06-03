@@ -18,8 +18,7 @@ textarea,
 	@include appearance;
 	@include font-size($font-size-s);
 	width: 100%;
-	padding: 0 $base-spacing-ms;
-	/*outline: none;*/
+	padding: 0 $base-spacing-xxs;
 	border: 1px solid $form-border-color;
 	font-weight: $font-weight-light;
 	color: $form-text-color;
@@ -49,6 +48,31 @@ select:not([multiple]):not([size]) {
 	height:45px;
 }
 
+input[type=text],
+input[type=number],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=datetime-local],
+input[type=tel],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
+input[type=file],
+select,
+select[multiple],
+select[size],
+textarea,
+button,
+.form-control {
+	
+	&:focus {
+		outline: none;
+		border: 1px solid $outline-color !important;
+	}
+}
+
 input {
 	
 	&[type=file] {
@@ -57,83 +81,87 @@ input {
 	
 	&[type=checkbox],
 	&[type=radio] {
-		margin-right: $base-spacing-ms;
+		margin-right: $base-spacing-xxs;
 	}
 }
 
 textarea {
-	padding: $base-spacing-ms !important;
+	padding: $base-spacing-xxs !important;
 }
 
-.form-group--row {
+.form-group-row {
 	@include media-breakpoint-up(ms) {
 		@include flexbox;
-		@include flex-wrap(wrap);
 		@include align-items(flex-start);
 		@include justify-content(space-between);
 	}
 	
-	&---default {
+	.form-group {
+		@include media-breakpoint-up(ms) {
+			@include flex(1 1 100%);
+		}
+	}
+	
+	&.row--two-col {
 		
 		.form-group {
 			@include media-breakpoint-up(ms) {
-				@include calc(width, #{'50% - 10px'});
+				@include calc(max-width, #{'50% - '$base-spacing-col});
 			}
 		}
 	}
 	
-	&---three-col {
+	&.row--three-col {
 		
 		.form-group {
 			@include media-breakpoint-up(ms) {
-				@include calc(width, #{'100% / 3 - 13.333333333px'});
+				@include calc(max-width, #{'(100% - '$base-spacing-sm') / 3'});
 			}
 		}
 	}
 	
-	&---address {
+	&.row--address {
 
 		.form-group {
 			
 			&:first-child {
 				@include media-breakpoint-up(ms) {
-					@include calc(width, #{'100% - 210px'});
+					@include calc(max-width, #{'100% - 100px - '$base-spacing-col});
 				}
 			}
 			
 			&:last-child {
 				@include media-breakpoint-up(ms) {
-					width: 190px;
+					@include calc(max-width, #{'100px - '$base-spacing-col});
 				}
 			}
 		}
 	}
 	
-	&---addressrevert {
+	&.row--address-revert {
 
 		.form-group {
 			
 			&:first-child {
 				@include media-breakpoint-up(ms) {
-					width: 190px;
+					@include calc(max-width, #{'100px - '$base-spacing-col});
 				}
 			}
 			
 			&:last-child {
 				@include media-breakpoint-up(ms) {
-					@include calc(width, #{'100% - 210px'});
+					@include calc(max-width, #{'100% - 100px - '$base-spacing-col});
 				}
 			}
 		}
 	}
-	
 }
 
 .form-group {
-	margin-bottom: $base-spacing-sm;
+	margin-bottom: $base-spacing-xs;
 	
 	.alert {
-		margin-top: $base-spacing-xs;
+		margin-top: $base-spacing;
 		margin-bottom: 0;
 		
 		&.alert-danger {
@@ -144,7 +172,7 @@ textarea {
 	}
 	
 	> label {
-		margin-bottom: $base-spacing-xs;
+		margin-bottom: $base-spacing;
 		display: block;
 	}
 	
@@ -152,7 +180,7 @@ textarea {
 		position: relative;
 		
 		input {
-			padding-right:45px;
+			padding-right: 45px;
 		}
 		
 		.search-button {
@@ -196,17 +224,17 @@ textarea {
 		height: 45px;
 		display: inline-block;
 		
-		.custom-file-input {
+		&__input {
 			
-			~ .custom-file-label {
+			~ .custom-file__label {
 				
 				&:before {
 					@include font-size($font-size-s);
 					@include position-absolute(0, auto, 0, 0);
 					height: 45px;
-					padding: 0 $base-spacing-sm;
+					padding: 0 $base-spacing-xxs;
 					display: block;
-					color: $form-text-color;;
+					color: $form-text-color;
 					line-height: 43px;
 					z-index: 3;
 				}
@@ -215,7 +243,7 @@ textarea {
 					@include font-size($font-size-s);
 					@include position-absolute(-1px, 0, 0, auto);
 					height: 45px;
-					padding: 0 $base-spacing-sm;
+					padding: 0 $base-spacing-xs;
 					display: block;
 					border-left: 1px solid $form-border-color;
 					color: $form-text-color;
@@ -226,7 +254,7 @@ textarea {
 			
 			&:lang(en) {
 				
-				~ .custom-file-label {
+				~ .custom-file__label {
 					
 					&:before{
 						content: 'File format: jpg / png, max. 3 MB';
@@ -241,7 +269,7 @@ textarea {
 			
 			&:lang(de) {
 				
-				~ .custom-file-label {
+				~ .custom-file__label {
 					
 					&:before {
 						content: 'Dateiformat: jpg / png, max. 3 MB';
@@ -255,7 +283,7 @@ textarea {
 			
 			&:lang(ru) {
 				
-				~ .custom-file-label {
+				~ .custom-file__label {
 					
 					&:before {
 						content: 'Формат файла: jpg / png, max. 3 MB';
@@ -269,20 +297,20 @@ textarea {
 			
 			&:focus {
 				
-				+ .custom-file-label {
-					border: 1px solid $color-yellow;
+				+ .custom-file__label {
+					border: 1px solid $outline-color;
 				}
 			}
 		}
 		
-		.custom-file-label {
+		&__label {
 			@include appearance;
 			@include font-size($font-size-s);
 			@include position-absolute(0, 0, auto, 0);
 			width: 100%;
 			height: 45px;
 			margin-bottom: 0;
-			padding: 0 $base-spacing-ms;
+			padding: 0 $base-spacing-xxs;
 			background: $color-white;
 			border: 1px solid $form-border-color;
 			box-shadow: none;
@@ -291,7 +319,7 @@ textarea {
 			line-height: 43px;
 			z-index: 1;
 			
-			&.has-file {
+			&.has--file {
 				color: $form-text-color !important;
 				
 				&:before {
@@ -306,9 +334,9 @@ textarea {
 		padding-left: 0;
 		display: block;
 		
-		&.custom-checkbox,
-		&.custom-radio {
-			margin-bottom: $base-spacing-ms;
+		&.custom--checkbox,
+		&.custom--radio {
+			margin-bottom: $base-spacing-xxs;
 			
 			input {
 				
@@ -323,11 +351,11 @@ textarea {
 				}
 			}
 			
-			.custom-control-input {
+			.custom-control__input {
 				
 				&:disabled {
 					
-					~ .custom-control-label {
+					~ .custom-control__label {
 						opacity: .25;
 						color: $form-text-color;
 					}
@@ -335,16 +363,16 @@ textarea {
 				
 				&:focus {
 					
-					+ .custom-control-label {
+					+ .custom-control__label {
 						
 						&:before {
-							border: 1px solid $color-yellow;
+							border: 1px solid $outline-color;
 						}
 					}
 				}
 			}
 			
-			.custom-control-label {
+			.custom-control__label {
 				@include flexbox;
 				@include align-items(center);
 				@include position-relative;
@@ -376,7 +404,7 @@ textarea {
 				&:focus {
 					
 					&:before {
-						border: 1px solid $color-yellow;
+						border: 1px solid $outline-color;
 					}
 				}
 				
@@ -395,18 +423,18 @@ textarea {
 			.valid-feedback,
 			.invalid-feedback {
 				margin-top:0;
-				margin-bottom: $base-spacing-ms;
-				padding-left: 30px;
+				margin-bottom: $base-spacing-xxs;
+				padding-left: $base-spacing-sm;
 			}
 		}
 		
-		&.custom-checkbox {
+		&.custom--checkbox {
 			
-			.custom-control-input {
+			.custom-control__input {
 				
 				&:checked {
 					
-					~ .custom-control-label {
+					~ .custom-control__label {
 						
 						&:after {
 							background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23000000' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
@@ -416,13 +444,13 @@ textarea {
 			}
 		}
 
-		&.custom-radio {
+		&.custom--radio {
 			
-			.custom-control-input {
+			.custom-control__input {
 				
 				&:checked {
 					
-					~ .custom-control-label {
+					~ .custom-control__label {
 						
 						&:after {
 							background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23000000'/%3E%3C/svg%3E");
@@ -431,7 +459,7 @@ textarea {
 				}
 			}
 			
-			.custom-control-label {
+			.custom-control__label {
 				
 				&:before {
 					border-radius: 50%;
@@ -440,8 +468,8 @@ textarea {
 		}
 	}
 	
-	.comby-field,
-	&.comby-field {
+	.combo-field,
+	&.group--combo {
 		@include flexbox;
 		@include align-items(center);
 		@include justify-content(flex-end);
@@ -455,37 +483,13 @@ textarea {
 			@include flex-shrink(1);
 			@include font-size($font-size-s);
 			height: 45px;
-			padding: 0 $base-spacing-sm;
+			padding: 0 $base-spacing-xs;
 			display: block;
 			background: none;
 			border: 1px solid $form-border-color;
 			border-left: none;
 			color: $form-text-color;
 			line-height: 43px;
-		}
-	}
-	
-	&.text-danger {
-		
-		input[type=text],
-		input[type=number],
-		input[type=date],
-		input[type=month],
-		input[type=week],
-		input[type=datetime-local],
-		input[type=tel],
-		input[type=email],
-		input[type=url],
-		input[type=password],
-		input[type=search],
-		input[type=file],
-		select,
-		select[multiple],
-		select[size],
-		textarea,
-		.form-control,
-		.custom-control-label::before {
-			border-color: $color-error !important;
 		}
 	}
 }
@@ -506,7 +510,7 @@ textarea {
 		width: 100%;
 		height: 45px;
 		margin-bottom: 0;
-		padding: 0 $base-spacing-ms;
+		padding: 0 $base-spacing-xxs;
 		display: block;
 		cursor: text;
 		pointer-events: none;
@@ -542,15 +546,15 @@ textarea {
 		}
 		
 		&:not(:placeholder-shown) {
-			padding-top: $base-spacing-sm + 3 !important;
-			padding-bottom: $base-spacing-xs;
+			padding-top: $base-spacing-xs + 3 !important;
+			padding-bottom: $base-spacing;
 			color: $form-text-color;
 			
 			~ label {
 				@include font-size($font-size-xs);
 				margin: 0;
-				padding-top: $base-spacing-xs;
-				padding-bottom: $base-spacing-sm;
+				padding-top: $base-spacing;
+				padding-bottom: $base-spacing-xs;
 				color: $form-placeholder-color;
 				line-height: inherit;
 			}
@@ -563,30 +567,3 @@ button {
 	touch-action: manipulation;
 	-ms-touch-action: manipulation;
 }
-
-input[type=text],
-input[type=number],
-input[type=date],
-input[type=month],
-input[type=week],
-input[type=datetime-local],
-input[type=tel],
-input[type=email],
-input[type=url],
-input[type=password],
-input[type=search],
-input[type=file],
-select,
-select[multiple],
-select[size],
-textarea,
-button,
-.form-control {
-	
-	&:focus {
-		outline: none;
-		border: 1px solid $color-yellow !important;
-	}
-}
-
-

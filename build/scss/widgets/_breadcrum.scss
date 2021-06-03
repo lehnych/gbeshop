@@ -1,7 +1,7 @@
 .breadcrumb {
 	background: $intro-bg;
 	
-	&--wrapper {
+	&__wrapper {
 		@include flexbox;
 		@include flex-direction(column);
 		@include align-items(center);
@@ -9,11 +9,11 @@
 		@include media-breakpoint-up(sm) {
 			@include flex-direction(row);
 			@include justify-content(space-between);
-			padding-top: $base-spacing-md * 3;
-			padding-bottom: $base-spacing-md * 3;
+			padding-top: $base-spacing-xl;
+			padding-bottom: $base-spacing-xl;
 		}
-		padding-top: $base-spacing-sm * 2;
-		padding-bottom: $base-spacing-sm * 2;
+		padding-top: $base-spacing-sm;
+		padding-bottom: $base-spacing-sm;
 	}
 	
 	h1 {
@@ -21,9 +21,9 @@
 		@include media-breakpoint-up(sm) {
 			margin-bottom: 0;
 		}
-		margin-bottom: $base-spacing-md;
+		margin-bottom: $base-spacing-ms;
 		font-weight: $font-weight-regular;
-		color: $color-rose;
+		color: $deco-color;
 		text-transform: uppercase;
 	}
 	
@@ -39,12 +39,12 @@
 			a {
 				
 				&:hover {
-					color: $color-rose;
+					color: $deco-color;
 				}
 				
 				&.active {
 					font-weight: $font-weight-bold;
-					color: $color-rose;
+					color: $deco-color;
 				}
 				
 			}
@@ -52,7 +52,7 @@
 			&:not(:first-child) {
 				
 				&:before {
-					margin: 0 $base-spacing-xs;
+					margin: 0 $base-spacing;
 					content: '/';
 				}
 			}

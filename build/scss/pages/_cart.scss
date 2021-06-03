@@ -1,6 +1,12 @@
 .cart {
 	
-	&--wrapper {
+	h3 {
+		@include font-size($font-size-m);
+		font-weight: $font-weight-light;
+		text-transform: uppercase;
+	}
+	
+	&__wrapper {
 		@include flexbox;
 		@include flex-direction(column);
 		@include media-breakpoint-up(md) {
@@ -9,7 +15,7 @@
 		}
 	}
 	
-	.cart-information {
+	&__products {
 		@include media-breakpoint-up(md) {
 			@include flex(0 1 100%);
 			max-width: 650px;
@@ -17,30 +23,29 @@
 		
 		.product-grid {
 			
-			&.mode-list {
+			&.mode--list {
 				
 				.product-item {
 					@include box-shadow(17px 19px 24px rgba($color-black, 0.13));
 					width: 100%;
 					padding: 0;
 					
-					&--wrapper {
+					&__wrapper {
 						@include flex-direction(row);
 						max-width: 100%;
-						
 						background: $color-white;
 						
-						[class^="product-option--"],
-						[class*=" product-option--"] {
+						[class^="product-option__"],
+						[class*=" product-option__"] {
 							
 							&:not(:last-child) {
-								margin-bottom: $base-spacing-xs;
+								margin-bottom: $base-spacing;
 							}
 						}
 						
 						.product-option {
 							
-							&--quantity {
+							&__quantity {
 								@include flexbox;
 								@include flex-direction(column);
 								@include align-items(flex-start);
@@ -57,12 +62,18 @@
 									@media (min-width: 375px) {
 										@include flex-direction(row);
 										margin-top: 0;
-										margin-left: $base-spacing-xs;
+										margin-left: $base-spacing;
 									}
-									margin-top: $base-spacing-xs;
+									margin-top: $base-spacing;
 									
-									&--minus,
-									&--plus {
+									input {
+										width: 40px;
+										height: 25px;
+										text-align: center;
+									}
+									
+									&__minus,
+									&__plus {
 										@include flexbox;
 										@include align-items(center);
 										@include justify-content(center);
@@ -72,18 +83,13 @@
 										border: 1px solid $border-color;
 									}
 									
-									&--minus {
+									&__minus {
 										width: 25px;
 										height: 25px;
 										border-right: none;
 									}
 									
-									input {
-										width: 40px;
-										height: 25px;
-									}
-									
-									&--plus {
+									&__plus {
 										border-left: none;
 									}
 								}
@@ -91,7 +97,7 @@
 						}
 					}
 					
-					&--picture {
+					&__picture {
 						@include media-breakpoint-down(ms) {
 							@include flex-grow(0);
 							@include flex-shrink(0);
@@ -100,7 +106,7 @@
 						}
 					}
 					
-					&--decription {
+					&__decription {
 						
 						h4 {
 							@include flexbox;
@@ -109,13 +115,17 @@
 						}
 					}
 					
-					&--delete {
+					&__delete {
 						
 						img {
 							@media (max-width: 374px) {
 								width: 14px;
 							}
 						}
+					}
+					
+					&:last-child {
+						margin-bottom: 0;
 					}
 				}
 			}
@@ -124,30 +134,25 @@
 		.button-set {
 			@include flexbox;
 			@include justify-content(space-between);
-			
 			@include media-breakpoint-only(sm) {
 				@include justify-content(space-evenly);
 			}
 			
 			.btn {
-				@include media-breakpoint-up(md) {
-					text-transform: uppercase;
-				}
 				@include media-breakpoint-down(ms) {
 					@include font-size($font-size-xs);
-					@include calc(width, #{'50% -'$base-spacing-sm / 2});
+					@include calc(width, #{'50% -'$base-spacing-col});
 					font-weight: $font-weight-regular;
+					padding: 0 $base-spacing-xxs;
 				}
 			}
 		}
 	}
 	
-	
-	
-	.payment-information {
+	&__informations {
 		@include flexbox;
 		@include flex-direction(column);
-		@include media-breakpoint-between(ms, md) {
+		@include media-breakpoint-only(sm) {
 			@include flex-direction(row);
 			@include justify-content(space-between);
 		}
@@ -155,75 +160,59 @@
 			@include flex(0 1 100%);
 			max-width: 360px;
 			margin-top: 0 !important;
-			margin-left: $base-spacing-sm * 2;
+			margin-left: $base-spacing-sm;
 		}
-		margin-top: $base-spacing-sm * 3;
+		margin-top: $base-spacing-xmd;
 		
 		section {
-			@include media-breakpoint-between(ms, md) {
-				@include calc(width, #{'50% -'$base-spacing-sm / 2});
+			@include media-breakpoint-only(sm) {
+				@include calc(width, #{'50% -'$base-spacing-xs});
 			}
 		}
+	}
+	
+	&__total {
+		@include media-breakpoint-only(sm) {
+			margin-top: $base-spacing-sm !important;
+		}
 		
-		.shipping-address {
+		&__wrapper {
+			padding: $base-spacing-md;
+			background: $content-element-bg;
+		}
+		
+		&__item {
+			@include flexbox;
+			@include justify-content(flex-end);
+			@include font-size($font-size-xs);
+			text-transform: uppercase;
 			
-			h3 {
+			span {
+				text-align: right;
+				
+				&:last-child {
+					min-width: 100px;
+				}
+			}
+			
+			&:not(.grand-total) {
+				margin-bottom: $base-spacing;
+			}
+			
+			&.grand--total {
 				@include font-size($font-size-m);
-				font-weight: $font-weight-light;
-				text-transform: uppercase;
-			}
-		}
-		
-		.basket-total {
-			@include media-breakpoint-between(ms, md) {
-				margin-top: $base-spacing-sm * 2;
-			}
-			
-			&--wrapper {
-				padding: $base-spacing-lg;
-				background: $color-gray-light;
-			}
-			
-			&--item {
-				@include flexbox;
-				@include justify-content(flex-end);
-				@include font-size($font-size-xs);
-				text-transform: uppercase;
 				
 				span {
-					text-align: right;
-					
-					&:first-child {
-					
-					}
 					
 					&:last-child {
-						min-width: 100px;
+						color: $deco-color;
 					}
 				}
-				
-				&:not(.grand-total) {
-					margin-bottom: $base-spacing-xs;
-				}
-				
-				&.grand-total {
-					@include font-size($font-size-m);
-					
-					span {
-						
-						&:last-child {
-							color: $color-rose;
-						}
-					}
-				}
-				
-			}
-			
-			.btn {
-				width: 100%;
-				text-transform: uppercase;
 			}
 		}
 		
+		.btn {
+			width: 100%;
+		}
 	}
 }
