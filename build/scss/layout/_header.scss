@@ -1,6 +1,6 @@
 header {
-	padding: $base-spacing-sm 0;
-	background: $color-black-light;
+	padding: $base-spacing-xs 0;
+	background: $header-bg;
 	
 	img {
 		display: block;
@@ -8,20 +8,19 @@ header {
 	
 	.header {
 		
-		&--wrapper {
+		&__wrapper {
 			@include flexbox;
 			@include align-items(center);
 			@include justify-content(space-between);
 		}
 		
-		&--col {
+		&__col {
 			@include flexbox;
 			@include align-items(center);
 			
 			> *:not(:first-child) {
-				margin-left: $base-spacing-sm * 2;
+				margin-left: $base-spacing-xs;
 			}
-			
 			
 			.user {
 				@include media-breakpoint-down(ms) {
@@ -35,7 +34,7 @@ header {
 				}
 				@include position-relative;
 				
-				&--count {
+				&__count {
 					@include flexbox;
 					@include align-items(center);
 					@include justify-content(center);
@@ -43,7 +42,7 @@ header {
 					@include position-absolute(-9px, -9px, auto, auto);
 					width: 18px;
 					height: 18px;
-					background: $color-rose;
+					background: $deco-color;
 					border-radius: 50%;
 					color: $color-white;
 					text-align: center;

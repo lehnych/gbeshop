@@ -1,16 +1,16 @@
 ol,
 ul {
-	margin-bottom: $base-spacing-sm;
+	margin-bottom: $base-spacing-xs;
 	padding-left:0;
 	list-style: none;
 	list-style-position: outside;
 	
 	&:not(:last-child) {
-		margin-bottom: $base-spacing-sm;
+		margin-bottom: $base-spacing-xs;
 	}
 	
 	li:not(:last-of-type) {
-		margin-bottom: $base-spacing-xs;
+		margin-bottom: $base-spacing;
 	}
 	
 	&.check,
@@ -18,10 +18,10 @@ ul {
 	&.disc,
 	&.lower-latin,
 	&.square {
-		padding-left: $base-spacing-ms;
+		padding-left: $base-spacing-xxs;
 		
 		li {
-			margin-left: $base-spacing-xs;
+			margin-left: $base-spacing;
 		}
 	}
 	

@@ -34,21 +34,21 @@ $(document).ready(function() {
     });
 
     /* Filter */
-    $('.filter-primary--item---header').each(function () {
+    $('.filter-primary__item__header').each(function () {
         $(this).click(function(){
 
-            if ($(this).hasClass("active")) {
-                $(this).removeClass("active");
+            if ($(this).hasClass("is--active")) {
+                $(this).removeClass("is--active");
                 if (w < 568) {
                     $('span:first-child', this).hide();
                 }
             } else {
-                $(this).addClass("active");
+                $(this).addClass("is--active");
                 if (w < 568) {
                     $('span:first-child', this).show();
                 }
             }
-            $(".filter-primary--item---content").fadeToggle();
+            $(".filter-primary__item__content").fadeToggle();
         });
     });
 

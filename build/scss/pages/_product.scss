@@ -2,7 +2,7 @@
 	margin-top: 0;
 	
 	.swiper-container {
-		padding-bottom: $base-spacing-md *3 + 5;
+		padding-bottom: $base-spacing-xl;
 		background-color: $slider-background-color;
 		
 		.swiper-slide {
@@ -16,7 +16,7 @@
 		}
 	}
 	
-	+ .main--wrapper {
+	+ .main__wrapper {
 		margin-top: 0;
 	}
 }
@@ -25,31 +25,31 @@
 	
 	&-details {
 		@include position-relative;
-		margin-top: -$base-spacing-xl * 2 - 5;
-		margin-bottom: $base-spacing-md * 3;
-		padding: $base-spacing-md * 3 $base-spacing-md;
+		margin-top: -$base-spacing-xl - $base-spacing;
+		margin-bottom: $base-spacing-xl;
+		padding: $base-spacing-xl $base-spacing-ms;
 		background: $color-white;
 		border: 1px solid $border-color-light;
 		text-align: center;
 		z-index: 1;
 		
-		&--wrapper {
+		&__wrapper {
 			max-width: 550px;
 			margin-right: auto;
 			margin-left: auto;
 		}
 		
-		&--name {
+		&__name {
 			@include font-size($font-size-l);
-			margin-bottom: $base-spacing-sm * 3;
+			margin-bottom: $base-spacing-xmd;
 			text-transform: uppercase;
 			
 			span {
 				@include position-relative;
 				@include font-size($font-size-s);
-				padding-bottom: $base-spacing-md + 5px;
+				padding-bottom: $base-spacing-xms;
 				display: block;
-				color: $color-rose;
+				color: $deco-color;
 				
 				&:after {
 					@include position-absolute(auto, auto, 12px, 50%);
@@ -57,30 +57,29 @@
 					height: 3px;
 					margin-left: -30px;
 					content: '';
-					background: $color-rose;
+					background: $deco-color;
 				}
 			}
 		}
 		
-		&--description {
-			margin-bottom: $base-spacing-sm * 3;
+		&__description {
+			margin-bottom: $base-spacing-xmd;
 		}
 		
-		&--options {
+		&__options {
 			@include flexbox;
 			@include align-items(center);
 			@include justify-content(space-between);
 			@include position-relative;
 			@include justify-content(center);
-			margin-bottom: $base-spacing-sm * 3;
-			padding-top: $base-spacing-sm * 3;
+			margin-bottom: $base-spacing-xmd;
+			padding-top: $base-spacing-xmd;
 			border-top: 1px solid $border-color-light;
 		}
 		
-		&--price {
+		&__price {
 			@include font-size($font-size-h2);
-			margin-bottom: $base-spacing-sm * 3;
-			color: $color-rose;
+			margin-bottom: $base-spacing-xmd;
 			text-transform: uppercase;
 		}
 		
@@ -88,9 +87,10 @@
 			
 			svg {
 				width: 26px;
-				margin-right: $base-spacing-sm;
+				margin-right: $base-spacing-xs;
+				
 				path {
-					fill: $color-rose;
+					fill: $deco-color;
 				}
 			}
 			
