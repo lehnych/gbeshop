@@ -138,9 +138,11 @@ footer {
 					width: 32px;
 					height: 32px;
 					background: $color-white;
+					color: $color-black;
 					
 					&:hover {
 						background: $color-rose;
+						color: $color-white;
 					}
 				}
 			}

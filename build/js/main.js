@@ -5,6 +5,22 @@ $(document).ready(function() {
     var w = $(window).width();
     var headerHeight = $('header').outerHeight();
 
+    /* Slider */
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        speed: 1000,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        /*pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+            clickable: true
+        }*/
+    });
+
     /* Mobile Nav*/
     $('#mobile-menu-bar').css('top', headerHeight);
 

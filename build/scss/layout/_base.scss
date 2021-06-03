@@ -107,7 +107,10 @@ hr {
 section {
 	
 	+ section {
-		margin-top: $base-spacing-sm * 3;
+		
+		&:not(.poduct-slider) {
+			margin-top: $base-spacing-sm * 3;
+		}
 	}
 }
 
