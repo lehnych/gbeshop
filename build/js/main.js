@@ -28,7 +28,7 @@ $(document).ready(function() {
         $('#mobile-menu-bar').toggleClass('active');
         $('body').toggleClass('noscroll');
     });
-    $('#mobile-menu-header img').on('click',function(){
+    $('#mobile-menu-header .icon__times').on('click',function(){
         $('#mobile-menu-bar').removeClass('active');
         $('body').removeClass('noscroll');
     });

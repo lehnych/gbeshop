@@ -22,6 +22,11 @@
 		color: $color-black;
 		text-transform: uppercase;
 		
+		[class^="icon__"],
+		[class*=" icon__"] {
+			cursor: pointer;
+		}
+		
 		img {
 			cursor: pointer;
 		}

@@ -19,7 +19,13 @@ header {
 			@include align-items(center);
 			
 			> *:not(:first-child) {
-				margin-left: $base-spacing-xs;
+				margin-left: $base-spacing-sm;
+			}
+			
+			[class^="icon__"],
+			[class*=" icon__"] {
+				@include font-size(30px);
+				color: $color-white;
 			}
 			
 			.user {

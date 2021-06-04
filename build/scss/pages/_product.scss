@@ -82,27 +82,5 @@
 			margin-bottom: $base-spacing-xmd;
 			text-transform: uppercase;
 		}
-		
-		.btn {
-			
-			svg {
-				width: 26px;
-				margin-right: $base-spacing-xs;
-				
-				path {
-					fill: $deco-color;
-				}
-			}
-			
-			&:hover {
-				
-				svg {
-					
-					path {
-						fill: $color-white;
-					}
-				}
-			}
-		}
 	}
 }
