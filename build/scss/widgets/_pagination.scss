@@ -1,6 +1,7 @@
 .pagination {
 	@include flexbox;
 	@include justify-content(center);
+	margin-top: $base-spacing-sm !important;
 	
 	&__wrapper {
 		@include flexbox;
@@ -19,43 +20,12 @@
 			@include calc(flex-basis, #{'100% / 9'});
 			@include position-relative;
 			min-height: 15px;
-			padding: $base-spacing $base-spacing-xxs;
+			padding: $base-spacing-xs $base-spacing;
 			line-height: 15px;
 			text-align: center;
 			
-			&:first-child,
-			&:last-child {
-				padding: $base-spacing-xxs;
-				text-indent: -99999px;
-				
-				&:after {
-					@include position(absolute, 0, 0, auto, auto);
-					width: 10px;
-					height: 10px;
-					content: '';
-					display: inline-block;
-					border-style: solid;
-					border-width: 2px 2px 0 0;
-					vertical-align: top;
-				}
-			}
-			
-			&:first-child {
-				
-				&:after {
-					@include position(absolute, 50%, auto, auto, 50%);
-					@include transform(rotate(225deg));
-					margin-top: -$base-spacing;
-				}
-			}
-			
-			&:last-child {
-				
-				&:after {
-					@include position(absolute, 50%, 50%, auto, auto);
-					@include transform(rotate(45deg));
-					margin-top: -$base-spacing;
-				}
+			&.is--active {
+				color: $deco-color;
 			}
 		}
 	}

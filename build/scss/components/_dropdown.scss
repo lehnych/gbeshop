@@ -1,6 +1,10 @@
 .dropdown {
 	
 	&__header {
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(flex-strat);
+		
 		@include position-relative;
 		@include media-breakpoint-down(ms) {
 			@include font-size($font-size-xs);
@@ -10,16 +14,11 @@
 		font-weight: $font-weight-regular;
 		text-transform: uppercase;
 		
-		&:after {
-			@include position(absolute, 0, 0, auto, auto);
-			@include transform(rotate(135deg));
-			width: 10px;
-			height: 10px;
-			content: '';
-			display: inline-block;
-			border-style: solid;
-			border-width: 2px 2px 0 0;
-			vertical-align: top;
+		span {
+			
+			&:first-child {
+				margin-right: $base-spacing-xs;
+			}
 		}
 	}
 	

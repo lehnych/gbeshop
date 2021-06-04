@@ -18,6 +18,12 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	
+	[class^="icon__"],
+	[class*=" icon__"] {
+		@include font-size($font-size-xxxl);
+		margin-right: $base-spacing-xxs;
+	}
+	
 	img {
 		width: 25px;
 		margin-right: $base-spacing-xxs;

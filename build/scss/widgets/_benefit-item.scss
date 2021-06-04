@@ -25,6 +25,12 @@
 		min-height: 40px;
 		margin-bottom: $base-spacing-xs;
 		
+		[class^="icon__"],
+		[class*=" icon__"] {
+			@include font-size(50px);
+			color: $deco-color;
+		}
+		
 		img {
 			margin-right: auto;
 			margin-left: auto;
