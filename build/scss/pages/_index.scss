@@ -1,13 +1,11 @@
 .teaser-grid,
 .product-grid,
-.cta-grid {
-	@include flexbox;
-	@include flex-wrap(wrap);
-}
-
-.more-products {
-	margin-top: $base-spacing-sm * 2;
-	text-align: center;
+.benefit-grid {
+	
+	&__wrapper {
+		@include flexbox;
+		@include flex-wrap(wrap);
+	}
 }
 
 @import 'catalog';

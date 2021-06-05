@@ -1,30 +1,38 @@
 .product-item {
 	@include flexbox;
 	@include flex-direction(column);
-	@include justify-content(space-between);
-	@include media-breakpoint-up(ms) {
-		@include calc(width, #{'100% / 2'});
-	}
 	@include media-breakpoint-up(md) {
-		@include calc(width, #{'100% / 3'});
-		margin-bottom: $base-spacing-sm * 2;
+		margin-bottom: $base-spacing-sm;
 	}
 	width: 100%;
-	margin-bottom: $base-spacing-sm;
-	padding-right: $base-spacing-sm;
-	padding-left: $base-spacing-sm;
+	margin-bottom: $base-spacing-xs;
+	padding-right: $base-spacing-xs;
+	padding-left: $base-spacing-xs;
 	
-	&--wrapper {
+	&__wrapper {
 		@include flexbox;
-		@include flex-direction(column);
-		max-width: 360px;
+		width: 100%;
 		height: 100%;
 		margin-right: auto;
 		margin-left: auto;
-		background: $color-gray-light;
+		background: $content-element-bg;
+		
+		.mode--grid & {
+			@include flex-direction(column);
+			max-width: 360px;
+		}
+		
+		.mode--list & {
+			@include media-breakpoint-up(ms) {
+				@include flex-direction(row);
+				max-width: 100%;
+			}
+			@include flex-direction(column);
+			max-width: 360px;
+		}
 	}
 	
-	&--picture {
+	&__picture {
 		@include flex-grow(0);
 		@include position-relative;
 		
@@ -45,47 +53,47 @@
 				opacity: 1;
 			}
 		}
+		
+		.mode--list & {
+			@include media-breakpoint-up(ms) {
+				@include flex-grow(0);
+				@include flex-shrink(0);
+				@include calc(flex-basis, #{'100% / 3'});
+				max-width: 185px;
+			}
+		}
 	}
 	
-	&--body {
+	&__body {
 		@include flexbox;
 		@include flex-direction(column);
 		@include justify-content(space-between);
 		@include flex-grow(1);
-		padding: $base-spacing-md $base-spacing-sm * 2 $base-spacing-md $base-spacing-md;
+		padding: $base-spacing-ms;
+		
+		.mode--grid & {
+			padding-right: $base-spacing-sm;
+		}
 	}
 	
-	&--decription {
-		margin-bottom: $base-spacing-sm + 3px;
+	&__decription {
+		margin-bottom: $base-spacing-xs;
 		
 		h4 {
 			@include font-size(13px);
-			margin-bottom: $base-spacing-sm - 2px;
+			margin-bottom: $base-spacing-xs;
 			font-weight: $font-weight-regular;
 			color: $color-black;
 			text-transform: uppercase;
+			
+			a {
+				color: $color-black;
+			}
 		}
 	}
 	
-	&--price {
+	&__price {
 		@include font-size($font-size-m);
 		font-weight: $font-weight-regular;
-		color: $color-red;
-	}
-	
-	&:nth-child(odd) {
-		@include media-breakpoint-up(ms) {
-			@include media-breakpoint-down(md) {
-				padding-right: $base-spacing-sm / 2;
-			}
-		}
-	}
-	
-	&:nth-child(even) {
-		@include media-breakpoint-up(ms) {
-			@include media-breakpoint-down(md) {
-				padding-left: $base-spacing-sm / 2;
-			}
-		}
 	}
 }

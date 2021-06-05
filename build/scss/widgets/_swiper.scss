@@ -1,6 +1,6 @@
 .swiper-box {
 	
-	&:not(.no-pagination) {
+	&:not(.no--pagination) {
 		padding-bottom: $base-spacing-md;
 	}
 	overflow: hidden;
@@ -22,14 +22,19 @@
 	margin-top: -$base-spacing-md;
 	outline: none;
 	background: $color-white;
-	color: $slider-button-color !important;
+	color: $slider-button-color;
 	
 	&::after {
-		font-size: $font-size-xl;
+		content: '';
+	}
+	
+	&:hover {
+		color: $deco-color;
 	}
 	
 	&.swiper-button-disabled {
-
+		pointer-events: inherit;
+		display: none;
 	}
 }
 

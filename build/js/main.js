@@ -28,27 +28,47 @@ $(document).ready(function() {
         $('#mobile-menu-bar').toggleClass('active');
         $('body').toggleClass('noscroll');
     });
-    $('#mobile-menu-header img').on('click',function(){
+    $('#mobile-menu-header .icon__times').on('click',function(){
         $('#mobile-menu-bar').removeClass('active');
         $('body').removeClass('noscroll');
     });
 
     /* Filter */
-    $('.filter-primary--item---header').each(function () {
+    $('.filter-primary__item__header').each(function () {
         $(this).click(function(){
 
-            if ($(this).hasClass("active")) {
-                $(this).removeClass("active");
+            if ($(this).hasClass("is--active")) {
+                $(this).removeClass("is--active");
                 if (w < 568) {
                     $('span:first-child', this).hide();
                 }
             } else {
-                $(this).addClass("active");
+                $(this).addClass("is--active");
                 if (w < 568) {
                     $('span:first-child', this).show();
                 }
             }
-            $(".filter-primary--item---content").fadeToggle();
+            $(".filter-primary__item__content").fadeToggle();
         });
+    });
+
+    /* Cart*/
+    $('[data-quantity="plus"]').click(function(e){
+        e.preventDefault();
+        fieldName = $(this).attr('data-field');
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        var currentMaxVal = parseInt($('input[name='+fieldName+']').attr('max'));
+        if (!isNaN(currentVal) && currentVal < currentMaxVal) {
+            $('input[name='+fieldName+']').val(currentVal + 1);
+        }
+    });
+    $('[data-quantity="minus"]').click(function(e) {
+        e.preventDefault();
+        fieldName = $(this).attr('data-field');
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        var currentMinVal = parseInt($('input[name='+fieldName+']').attr('min'));
+        if (!isNaN(currentVal) && currentVal > currentMinVal) {
+            $('input[name='+fieldName+']').val(currentVal - 1);
+        }
     });
 });

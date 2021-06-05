@@ -8,7 +8,7 @@
 		line-height: 45px;
 	}
 	min-height: 45px;
-	padding: 0 $base-spacing-sm;
+	padding: 0 $base-spacing-xs;
 	cursor: pointer;
 	outline: none;
 	border: none;
@@ -16,17 +16,20 @@
 	font-weight: $font-weight-regular;
 	text-align: center;
 	text-decoration: none;
+	text-transform: uppercase;
 	
-	&:focus {
-		box-shadow: none;
+	[class^="icon__"],
+	[class*=" icon__"] {
+		@include font-size($font-size-xxxl);
+		margin-right: $base-spacing-xxs;
 	}
 	
 	img {
 		width: 25px;
-		margin-right: $base-spacing-ms;
+		margin-right: $base-spacing-xxs;
 	}
 	
-	&.primary {
+	&__primary {
 		background: $button-primary-background-color;
 		border: 1px solid $button-primary-border-color;
 		color: $button-primary-text-color;
@@ -45,6 +48,10 @@
 			border: 1px solid $button-primary-negative-border-color;
 			color: $button-primary-negative-text-color;
 			
+			&.btn--transparent {
+				color: $button-primary-negative-text-color !important;
+			}
+			
 			&:hover {
 				
 				&:not(:disabled) {
@@ -57,20 +64,43 @@
 		}
 	}
 	
-	&.ghost {
+	&__ghost {
 		background: $button-ghost-background-color;
 		border: 1px solid $button-ghost-border-color;
 		color: $button-ghost-text-color;
+		
+		&:hover {
+			
+			&:not(:disabled) {
+				background: $button-ghost-hover-background-color;
+				border-color: $button-ghost-hover-border-color;
+				color: $button-ghost-hover-text-color;
+			}
+		}
 		
 		&--negative {
 			background: $button-ghost-negative-background-color;
 			border: 1px solid $button-ghost-negative-border-color;
 			color: $button-ghost-negative-text-color;
+			
+			&.btn--transparent {
+				color: $button-ghost-negative-hover-text-color !important;
+			}
+			
+			&:hover {
+				
+				&:not(:disabled) {
+					background: $button-ghost-negative-hover-background-color;
+					border-color: $button-ghost-negative-hover-border-color;
+					color: $button-ghost-negative-hover-text-color;
+					
+				}
+			}
 		}
 	}
 	
-	&.transparent {
-		background: transparent;
+	&--transparent {
+		background: transparent !important;
 	}
 	
 	&:disabled,
@@ -85,13 +115,14 @@
 	@include align-items(center);
 	@include justify-content(center);
 	
-	&:not(:last-of-type) {
-		margin-bottom: $base-spacing-sm;
+	&:not(:last-child) {
+		margin-bottom: $base-spacing-xs;
 	}
 	
 	.btn {
+		
 		&:not(:first-child) {
-			margin-left: $base-spacing-md;
+			margin-left: $base-spacing-xs;
 		}
 	}
 }

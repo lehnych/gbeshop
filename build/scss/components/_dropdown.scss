@@ -1,33 +1,32 @@
 .dropdown {
 	
-	&--header {
+	&__header {
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(flex-strat);
+		
 		@include position-relative;
 		@include media-breakpoint-down(ms) {
 			@include font-size($font-size-xs);
 		}
-		padding-right: $base-spacing-md;
+		padding-right: $base-spacing-ms;
 		cursor: pointer;
 		font-weight: $font-weight-regular;
 		text-transform: uppercase;
 		
-		&:after {
-			@include position(absolute, 0, 0, auto, auto);
-			@include transform(rotate(135deg));
-			width: 10px;
-			height: 10px;
-			content: '';
-			display: inline-block;
-			border-style: solid;
-			border-width: 2px 2px 0 0;
-			vertical-align: top;
+		span {
+			
+			&:first-child {
+				margin-right: $base-spacing-xs;
+			}
 		}
 	}
 	
-	&--content {
+	&__content {
 		@include box-shadow(6px 4px 35px rgba($color-black, 0.2));
 		min-width: 100px;
-		margin-top: $base-spacing-xs !important;
-		padding: $base-spacing-ms;
+		margin-top: $base-spacing !important;
+		padding: $base-spacing-xxs;
 		background: $color-white;
 		z-index: 1;
 		
@@ -36,8 +35,8 @@
 			
 			.custom-control {
 				
-				&.custom-checkbox,
-				&.custom-radio {
+				&.custom--checkbox,
+				&.custom--radio {
 					
 					&:last-child {
 						margin-bottom: 0;
@@ -49,8 +48,8 @@
 	
 	&:not(:first-child) {
 		@include media-breakpoint-up(sm) {
-			margin-left: $base-spacing-sm *  2;
+			margin-left: $base-spacing-sm;
 		}
-		margin-left: $base-spacing-md;
+		margin-left: $base-spacing-ms;
 	}
 }

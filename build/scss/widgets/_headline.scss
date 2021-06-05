@@ -3,7 +3,12 @@
 	
 	h2 {
 		@include font-size(30px);
-		color: $color-black-light;
+		color: $headline-header-color;
 		font-weight: $font-weight-regular;
+	}
+	
+	p {
+		font-weight: $font-weight-regular;
+		color: $headline-text-color;
 	}
 }
