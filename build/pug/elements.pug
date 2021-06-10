@@ -2,6 +2,221 @@ extends layout/base
 
 block variables
 	- var pageTitle = 'Elements'
+	- var pageTitle = 'Elements'
+	- var catalogType = 'Women'
+	- var sectionIntro = false
+	- var sectionBreadcrumb = false
+	- var sectionProductSlider = false
+	- var sliderPagination = false
+
+block intro
+	section.intro
+		.intro__wrapper.container
+			h1.intro__header.aos-item(data-aos='fade-left' data-aos-duration='1000' data-aos-delay='500' data-aos-easing='ease-in-out')
+				|The Brand
+				|#[span of luxerios #[span fashion]]
+			.intro__img.aos-item(data-aos='fade-right' data-aos-duration='1000' data-aos-easing='ease-in-out')
+				img(src='img/intro.png' alt='Intro')
+
+block productslider
+	section.poduct-slider.swiper-box(class=sliderPagination ? '' : 'no--pagination')
 
 block maincontent
-	p text
+
+	section
+		style.
+			.glyphs {
+				padding: 0;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;
+				text-align: center;
+			}
+			.glyphs li {
+				width: calc(100% / 6);
+				padding: 0;
+			}
+			.glyphs [class^="icon__"],
+			.glyphs [class*=" icon__"] {
+				width:50px;
+				height:50px;
+				padding:10px;
+				display:inline-block;
+				overflow:hidden;
+				font-size:30px;
+				line-height:30px;
+				color:#000000;
+			}
+		h4 Clinton Iconfont
+		p.small(style='margin-bottom: 30px') This font was created with #[a(href='http://fontastic.me/') Fontastic]
+		.row
+			.col-4.col-2
+				ul.glyphs
+					li
+						.icon__angle-down
+						div angle-down
+					li
+						.icon__angle-up
+						div angle-up
+					li
+						.icon__angle-left
+						div angle-left
+					li
+						.icon__angle-right
+						div angle-right
+					li
+						.icon__angle-up
+						div angle-up
+					li
+						.icon__bars
+						div bars
+					li
+						.icon__cart
+						div cart
+					li
+						.icon__check
+						div check
+					li
+						.icon__crown
+						div crown
+					li
+						.icon__discount
+						div discount
+					li
+						.icon__facebook
+						div facebook
+					li
+						.icon__filter
+						div filter
+					li
+						.icon__instagram
+						div instagram
+					li
+						.icon__long-arrow-down
+						div long-arrow-down
+					li
+						.icon__long-arrow-left
+						div long-arrow-left
+					li
+						.icon__long-arrow-right
+						div long-arrow-right
+					li
+						.icon__long-arrow-up
+						div long-arrow-up
+					li
+						.icon__map-marker
+						div map-marker
+					li
+						.icon__minus
+						div minus
+					li
+						.icon__pinterest
+						div pinterest
+					li
+						.icon__plus
+						div plus
+					li
+						.icon__search
+						div search
+					li
+						.icon__times
+						div times
+					li
+						.icon__truck
+						div truck
+					li
+						.icon__twitter
+						div twitter
+					li
+						.icon__user
+						div user
+					li
+						.icon__youtube-play
+						div youtube-play
+
+	section
+		h4 Typo
+		h1 H1 Header
+		h2 H2 Subheader
+		h3 H3 Subsubheader
+		h4 H4 Subsubsubheader
+		h5 H5 Subsubsubsubheader
+		h6 H6 Subsubsubsubsubheader
+
+	section
+		h4 Copytext
+		p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam #[a(href='/' title='nonumy') nonumy] eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+	section
+		h4 UL
+		ul
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ul.disc
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ul.square
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ul.decimal
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ul.lower-latin
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ul.check
+			li Point 1
+			li Point 2
+			li Point 3
+
+
+	section
+		h4 OL
+		ol
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ol.disc
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ol.square
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ol.decimal
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ol.lower-latin
+			li Point 1
+			li Point 2
+			li Point 3
+
+		ol.check
+			li Point 1
+			li Point 2
+			li Point 3
+
+	section
+		h4 Forms
+		form
+			+input('Type "text"','text','fieldText','fieldText','Text','','','form-control',false)
+			+input('Type "email"','email','fieldEmail','fieldEmail','Email-Adresse','','','form-control',true)
+
+			+button('Submit','submit','btn btn__primary')

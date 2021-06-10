@@ -1,2 +1,12 @@
 main
-	block maincontent
+	if sectionIntro
+		block intro
+
+	if sectionBreadcrumb
+		include ../widgets/breadcrumb
+
+	if sectionProductSlider
+		block productslider
+
+	.main__wrapper.container
+		block maincontent

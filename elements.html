@@ -1,20 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Elements</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
-  </head>
-  <body>
-    <div class="page__wrapper">
-      <header></header>
-      <main>
-        <p>text</p>
-      </main>
-      <footer></footer>
-    </div>
-    <script type="text/javascript" src="js/script.min.js"></script>
-  </body>
-</html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+</head>
+<body>
+  <div class="page__wrapper">
+    <header></header>
+    <main>
+      <div class="main__wrapper container">
+        <section>
+          <style>
+            .glyphs {
+            	padding: 0;
+            	display: flex;
+            	flex-wrap: wrap;
+            	align-items: center;
+            	justify-content: space-between;
+            	text-align: center;
+            }
+            .glyphs li {
+            	width: calc(100% / 6);
+            	padding: 0;
+            }
+            .glyphs [class^="icon__"],
+            .glyphs [class*=" icon__"] {
+            	width:50px;
+            	height:50px;
+            	padding:10px;
+            	display:inline-block;
+            	overflow:hidden;
+            	font-size:30px;
+            	line-height:30px;
+            	color:#000000;
+            }
+          </style>
+          <h4>Clinton Iconfont</h4>
+          <p class="small" style="margin-bottom: 30px">This font was created with <a href="http://fontastic.me/">Fontastic</a></p>
+          <div class="row">
+            <div class="col-4 col-2">
+              <ul class="glyphs">
+                <li>
+                  <div class="icon__angle-down"></div>
+                  <div>angle-down</div>
+                </li>
+                <li>
+                  <div class="icon__angle-up"></div>
+                  <div>angle-up</div>
+                </li>
+                <li>
+                  <div class="icon__angle-left"></div>
+                  <div>angle-left</div>
+                </li>
+                <li>
+                  <div class="icon__angle-right"></div>
+                  <div>angle-right</div>
+                </li>
+                <li>
+                  <div class="icon__angle-up"></div>
+                  <div>angle-up</div>
+                </li>
+                <li>
+                  <div class="icon__bars"></div>
+                  <div>bars</div>
+                </li>
+                <li>
+                  <div class="icon__cart"></div>
+                  <div>cart</div>
+                </li>
+                <li>
+                  <div class="icon__check"></div>
+                  <div>check</div>
+                </li>
+                <li>
+                  <div class="icon__crown"></div>
+                  <div>crown</div>
+                </li>
+                <li>
+                  <div class="icon__discount"></div>
+                  <div>discount</div>
+                </li>
+                <li>
+                  <div class="icon__facebook"></div>
+                  <div>facebook</div>
+                </li>
+                <li>
+                  <div class="icon__filter"></div>
+                  <div>filter</div>
+                </li>
+                <li>
+                  <div class="icon__instagram"></div>
+                  <div>instagram</div>
+                </li>
+                <li>
+                  <div class="icon__long-arrow-down"></div>
+                  <div>long-arrow-down</div>
+                </li>
+                <li>
+                  <div class="icon__long-arrow-left"></div>
+                  <div>long-arrow-left</div>
+                </li>
+                <li>
+                  <div class="icon__long-arrow-right"></div>
+                  <div>long-arrow-right</div>
+                </li>
+                <li>
+                  <div class="icon__long-arrow-up"></div>
+                  <div>long-arrow-up</div>
+                </li>
+                <li>
+                  <div class="icon__map-marker"></div>
+                  <div>map-marker</div>
+                </li>
+                <li>
+                  <div class="icon__minus"></div>
+                  <div>minus</div>
+                </li>
+                <li>
+                  <div class="icon__pinterest"></div>
+                  <div>pinterest</div>
+                </li>
+                <li>
+                  <div class="icon__plus"></div>
+                  <div>plus</div>
+                </li>
+                <li>
+                  <div class="icon__search"></div>
+                  <div>search</div>
+                </li>
+                <li>
+                  <div class="icon__times"></div>
+                  <div>times</div>
+                </li>
+                <li>
+                  <div class="icon__truck"></div>
+                  <div>truck</div>
+                </li>
+                <li>
+                  <div class="icon__twitter"></div>
+                  <div>twitter</div>
+                </li>
+                <li>
+                  <div class="icon__user"></div>
+                  <div>user</div>
+                </li>
+                <li>
+                  <div class="icon__youtube-play"></div>
+                  <div>youtube-play</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h4>Typo</h4>
+          <h1>H1 Header</h1>
+          <h2>H2 Subheader</h2>
+          <h3>H3 Subsubheader</h3>
+          <h4>H4 Subsubsubheader</h4>
+          <h5>H5 Subsubsubsubheader</h5>
+          <h6>H6 Subsubsubsubsubheader</h6>
+        </section>
+        <section>
+          <h4>Copytext</h4>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam <a href="/" title="nonumy">nonumy</a> eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </section>
+        <section>
+          <h4>UL</h4>
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ul>
+          <ul class="disc">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ul>
+          <ul class="square">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ul>
+          <ul class="decimal">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ul>
+          <ul class="lower-latin">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ul>
+          <ul class="check">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ul>
+        </section>
+        <section>
+          <h4>OL</h4>
+          <ol>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ol>
+          <ol class="disc">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ol>
+          <ol class="square">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ol>
+          <ol class="decimal">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ol>
+          <ol class="lower-latin">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ol>
+          <ol class="check">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ol>
+        </section>
+        <section>
+          <h4>Forms</h4>
+          <form>
+            <div class="form-group">
+              <label>Type &quot;text&quot;</label>
+              <input class="form-control" type="text" id="fieldText" name="fieldText" placeholder="Text"/>
+            </div>
+            <div class="form-group">
+              <label>Type &quot;email&quot;</label>
+              <input class="form-control" type="email" id="fieldEmail" name="fieldEmail" placeholder="Email-Adresse" required="required"/>
+            </div>
+            <button class="btn btn__primary" type="submit">Submit</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+  <script type="text/javascript" src="js/script.min.js"></script>
+</body>

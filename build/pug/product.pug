@@ -1,7 +1,15 @@
 extends layout/base
 
 block variables
-	- var pageTitle = 'Product'
+	- var pageMetaTitle = 'Product'
+	- var pageTitle = 'New Arrivals'
+	- var catalogType = 'Women'
+	- var sectionBreadcrumb = true
+	- var sectionProductSlider = true
+	- var sliderPagination = false
+
+block productslider
+	section.poduct-slider.swiper-box(class=sliderPagination ? '' : 'no--pagination')
 
 block maincontent
 	p text

@@ -1,0 +1,49 @@
+mixin input(inputLabel, iputType, iputId, iputName, iputPlaceholder, iputMin, iputMax, iputClass, required)
+	.form-group
+		label(for=id)= inputLabel
+
+		if iputType == 'number'
+			input(
+				type=iputType
+				id=iputId
+				name=iputName
+				placeholder=iputPlaceholder
+				min=iputMin
+				max=iputMax
+				class=iputClass
+				required=required
+			)
+
+		else if iputType == 'date'
+
+		else if iputType == 'month'
+
+		else if iputType == 'week'
+
+		else if iputType == 'datetime - local'
+
+		else if iputType == 'type=tel'
+
+		else if iputType == 'type=email'
+
+		else if iputType == 'type=url'
+
+		else if iputType == 'type=password'
+
+		else if iputType == 'type=search'
+
+		else if iputType == 'type=file'
+
+		else if iputType == 'checkbox'
+
+		else if iputType == 'submit'
+
+		else
+			input(
+				type=iputType
+				id=iputId
+				name=iputName
+				placeholder=iputPlaceholder
+				class=iputClass
+				required=required
+			)

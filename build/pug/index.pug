@@ -1,7 +1,17 @@
 extends layout/base
 
 block variables
-	- var pageTitle = 'Shop'
+	- var pageMetaTitle = 'Shop'
+	- var sectionIntro = true
+
+block intro
+	section.intro
+		.intro__wrapper.container
+			h1.intro__header.aos-item(data-aos='fade-left' data-aos-duration='1000' data-aos-delay='500' data-aos-easing='ease-in-out')
+				|The Brand
+				|#[span of luxerios #[span fashion]]
+			.intro__img.aos-item(data-aos='fade-right' data-aos-duration='1000' data-aos-easing='ease-in-out')
+				img(src='img/intro.png' alt='Intro')
 
 block maincontent
 	p text
