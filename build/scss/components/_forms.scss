@@ -13,6 +13,7 @@ input[type=file],
 select,
 select[multiple],
 select[size],
+datalist,
 textarea,
 .form-control {
 	@include appearance;
@@ -63,6 +64,7 @@ input[type=file],
 select,
 select[multiple],
 select[size],
+datalist,
 textarea,
 button,
 .form-control {

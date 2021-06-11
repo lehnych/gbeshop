@@ -21,7 +21,14 @@
 	[class^="icon__"],
 	[class*=" icon__"] {
 		@include font-size($font-size-xxxl);
-		margin-right: $base-spacing-xxs;
+		
+		&:first-child {
+			margin-right: $base-spacing-xxs;
+		}
+		
+		&:last-child {
+			margin-left: $base-spacing-xxs;
+		}
 	}
 	
 	img {
