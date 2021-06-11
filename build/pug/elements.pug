@@ -216,7 +216,30 @@ block maincontent
 	section
 		h4 Forms
 		form
-			+input('Type "text"','text','fieldText','fieldText','Text','','','form-control',false)
-			+input('Type "email"','email','fieldEmail','fieldEmail','Email-Adresse','','','form-control',true)
+			// input(inputCustom, inputType, inputLabel, inputId, inputName, inputPlaceholder, inputValue, inputPattern, inputMin, inputMax, inputMinLength, inputMaxLength, inputAutocomplete, inputAutofocus, inputDisabled, inputReadonly, inputRequired, inputClass)
 
-			+button('Submit','submit','btn btn__primary')
+			h5 Default fields
+			+input(false, 'text', 'Type "text"', 'fieldText', 'fieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(false, 'email', 'Type "email"', 'fieldEmail', 'fieldEmail', 'Email-Adresse', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(false, 'tel', 'Type "tel"', 'fieldTel', 'fieldTel', 'Telephone', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(false, 'url', 'Type "url"', 'fieldUrl', 'fieldUrl', 'Homepage', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(false, 'password', 'Type "password"', 'fieldPassword', 'fieldPassword', 'Password', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(false, 'number', 'Type "number"', 'fieldNumber', 'fieldNumber', 'Number', false, false, '1', '5', false, false, false, false, false, false, true, 'form-control')
+			+input(false, 'search', 'Type "search"', 'fieldSearch', 'fieldSearch', 'Search', false, false, false, false, false, false, false, false, false, false, false, 'form-control')
+
+			h5 Custom fields
+			+input(true, 'text', 'Type "text"', 'fieldText', 'fieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(true, 'email', 'Type "email"', 'fieldEmail', 'fieldEmail', 'Email-Adresse', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(true, 'tel', 'Type "tel"', 'fieldTel', 'fieldTel', 'Telephone', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(true, 'url', 'Type "url"', 'fieldUrl', 'fieldUrl', 'Homepage', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(true, 'password', 'Type "password"', 'fieldPassword', 'fieldPassword', 'Password', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
+			+input(true, 'number', 'Type "number"', 'fieldNumber', 'fieldNumber', 'Number', false, false, '1', '5', false, false, false, false, false, false, true, 'form-control')
+
+
+
+
+			// mixin button(buttonLabel, buttonType, buttonClass, buttonIcon, buttonIconVariant, buttonIconPosition)
+			+button('Submit','submit', 'btn btn__primary', false , false, false)
+
+
+

@@ -186,12 +186,14 @@ textarea {
 		}
 		
 		.search-button {
+			@include font-size($font-size-xl);
 			@include position-absolute(0, 0, auto, auto);
 			width: 45px;
 			height: 45px;
 			padding: 0;
 			background: none;
 			border: none;
+			color: $color-gray-dark;
 			line-height: 45px;
 			text-align: center;
 			z-index: 1;
@@ -565,6 +567,7 @@ textarea {
 }
 
 button {
+	cursor: pointer;
 	outline: none !important;
 	touch-action: manipulation;
 	-ms-touch-action: manipulation;

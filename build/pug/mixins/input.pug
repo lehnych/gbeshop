@@ -1,49 +1,54 @@
-mixin input(inputLabel, iputType, iputId, iputName, iputPlaceholder, iputMin, iputMax, iputClass, required)
+mixin input(inputCustom, inputType, inputLabel, inputId, inputName, inputPlaceholder, inputValue, inputPattern, inputMin, inputMax, inputMinLength, inputMaxLength, inputAutocomplete, inputAutofocus, inputDisabled, inputReadonly, inputRequired, inputClass)
+
 	.form-group
-		label(for=id)= inputLabel
-
-		if iputType == 'number'
-			input(
-				type=iputType
-				id=iputId
-				name=iputName
-				placeholder=iputPlaceholder
-				min=iputMin
-				max=iputMax
-				class=iputClass
-				required=required
-			)
-
-		else if iputType == 'date'
-
-		else if iputType == 'month'
-
-		else if iputType == 'week'
-
-		else if iputType == 'datetime - local'
-
-		else if iputType == 'type=tel'
-
-		else if iputType == 'type=email'
-
-		else if iputType == 'type=url'
-
-		else if iputType == 'type=password'
-
-		else if iputType == 'type=search'
-
-		else if iputType == 'type=file'
-
-		else if iputType == 'checkbox'
-
-		else if iputType == 'submit'
-
+		if inputCustom
+			.form-label-group
+				input(
+					type=inputType
+					id=inputId
+					name=inputName
+					placeholder=inputPlaceholder
+					value=inputValue
+					pattern=inputPattern
+					min=inputMin
+					max=inputMax
+					minlength=inputMinLength
+					maxlength=inputMaxLength
+					autocomplete=inputAutocomplete
+					disabled=inputDisabled
+					readonly=inputReadonly
+					required=inputRequired
+					class=inputClass
+				)
+				label(for=id)= inputLabel
 		else
-			input(
-				type=iputType
-				id=iputId
-				name=iputName
-				placeholder=iputPlaceholder
-				class=iputClass
-				required=required
-			)
+			if inputType == 'search'
+				label(for=id)= inputLabel
+				.search-field
+					input(
+						type=inputType
+						id=inputId
+						name=inputName
+						placeholder=inputPlaceholder
+						class=inputClass
+					)
+					+button('', 'submit', 'search-button', true , 'icon__search', 'left')
+			else
+				label(for=id)= inputLabel
+				input(
+					type=inputType
+					id=inputId
+					name=inputName
+					placeholder=inputPlaceholder
+					value=inputValue
+					pattern=inputPattern
+					min=inputMin
+					max=inputMax
+					minlength=inputMinLength
+					maxlength=inputMaxLength
+					autocomplete=inputAutocomplete
+					disabled=inputDisabled
+					readonly=inputReadonly
+					required=inputRequired
+					class=inputClass
+				)
