@@ -26,22 +26,15 @@ ul {
 	}
 	
 	&.check {
+		padding-left: $base-spacing-xs;
 		
 		li {
 			@include position-relative;
 			
 			&:before {
-				@include position-absolute(auto, auto, auto, -15px);
-				width: 6px;
-				height: 10px;
-				content: '';
-				background-color: transparent;
-				border-bottom: 2px solid $text-color;
-				border-right: 2px solid $text-color;
-				transform: rotate(45deg);
-				-o-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
-				-webkit-transform: rotate(45deg);
+				left: -19.5px;
+				font-family: $gb-fontname !important;
+				content: $gb-check;
 				position: absolute;
 			}
 		}

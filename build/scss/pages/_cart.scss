@@ -1,7 +1,7 @@
 .cart {
 	
 	h3 {
-		@include font-size($font-size-m);
+		@include font-size($font-size-h5);
 		font-weight: $font-weight-light;
 		text-transform: uppercase;
 	}
