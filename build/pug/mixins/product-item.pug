@@ -5,7 +5,7 @@ mixin productItem(productName, productLink, productImg, productDescription, prod
 				a(href=productLink title=productName)
 					span.btn.btn__ghost--negative.btn--transparent
 						i.icon__cart
-						= 'Add to Cart'
+						|#{'Add to Cart'}
 				picture
 					img.img--fluid(src=productImg alt=productName)
 			.product-item__body
