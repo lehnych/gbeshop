@@ -216,30 +216,104 @@ block maincontent
 	section
 		h4 Forms
 		form
-			// input(inputCustom, inputType, inputLabel, inputId, inputName, inputPlaceholder, inputValue, inputPattern, inputMin, inputMax, inputMinLength, inputMaxLength, inputAutocomplete, inputAutofocus, inputDisabled, inputReadonly, inputRequired, inputClass)
-
+			//input(inputCustom, inputType, inputLabel, inputId, inputName, inputPlaceholder, inputValue, inputPattern, inputMin, inputMax, inputMinLength, inputMaxLength, inputAutocomplete, inputAutofocus, inputDisabled, inputReadonly, inputRequired, inputClass, inputCombo, inputComboButtonValues)
+			//inputImage(inputId, inputName, inputSrc, inputAlt, inputWidth, inputHeight, inputClass)
+			//inputRange(inputLabel, inputId, inputName, inputMin, inputMax, inputStep, inputClass)
+			//inputFile(inputCustom, inputLabel, inputId, inputName, inputLang, inputAccept, inputAutofocus, inputRequired, inputClass)
+			//mixin inputCheckbox(inputCustom, inputLabel, inputId, inputName, inputValue, inputChecked, inputRequired, inputClass)
+			//select(selectCustom, selectLabel, selectId, selectName, selectAutofocus, selectMultiple, selectSize, selectRequired, selectClass, selectSelected, selectVals)
+			//textarea(textareaCustom, textareaLabel, textareaId, textareaName, textareaPlaceholder, textareaRows, textareaMaxLength, textareaAutofocus, textareaDisabled, textareaReadonly, textareaRequired, textareaClass)
 			h5 Default fields
-			+input(false, 'text', 'Type "text"', 'fieldText', 'fieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(false, 'email', 'Type "email"', 'fieldEmail', 'fieldEmail', 'Email-Adresse', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(false, 'tel', 'Type "tel"', 'fieldTel', 'fieldTel', 'Telephone', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(false, 'url', 'Type "url"', 'fieldUrl', 'fieldUrl', 'Homepage', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(false, 'password', 'Type "password"', 'fieldPassword', 'fieldPassword', 'Password', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(false, 'number', 'Type "number"', 'fieldNumber', 'fieldNumber', 'Number', false, false, '1', '5', false, false, false, false, false, false, true, 'form-control')
-			+input(false, 'search', 'Type "search"', 'fieldSearch', 'fieldSearch', 'Search', false, false, false, false, false, false, false, false, false, false, false, 'form-control')
+			+input(false, 'text', 'Type "text"', 'fieldText', 'fieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'email', 'Type "email"', 'fieldEmail', 'fieldEmail', 'Email-Adresse', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'tel', 'Type "tel"', 'fieldTel', 'fieldTel', 'Telephone', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'url', 'Type "url"', 'fieldUrl', 'fieldUrl', 'Homepage', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'password', 'Type "password"', 'fieldPassword', 'fieldPassword', 'Password', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'number', 'Type "number"', 'fieldNumber', 'fieldNumber', 'Number', false, false, '1', '5', false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'search', 'Type "search"', 'fieldSearch', 'fieldSearch', 'Search', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'time', 'Type "time"', 'fieldTime', 'fieldTime', 'Time', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'date', 'Type "date"', 'fieldDate', 'fieldDate', 'Date', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'datetime-local', 'Type "datetime-local"', 'fieldDateTime', 'fieldDateTime', 'DateTime', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'week', 'Type "week"', 'fieldWeek', 'fieldWeek', 'Week', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(false, 'month', 'Type "month"', 'fieldMonth', 'fieldMonth', 'Month', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+select(false, 'Select', 'fieldSelect', 'fieldSelect', false, false, false, false, 'form-control', false, ['Select', 'Option 1', 'Option 2', 'Option 3', 'Option 4'])
+			+select(false, 'Select "multiple"', 'fieldSelectMultiple', 'fieldSelectMultiple', false, true, false, false, 'form-control', false, ['Option 1', 'Option 2', 'Option 3', 'Option 4'])
+			+select(false, 'Select "size"', 'fieldSelectSize', 'fieldSelectSize', false, true, '3', false, 'form-control', false, ['Option 1', 'Option 2', 'Option 3', 'Option 4'])
+			+inputImage('fieldImage', 'fieldImage', 'img/icons/truck.svg', 'Image', '46px', '32px', false)
+			+input(false, 'color', 'Type "color"', 'fieldColor', 'fieldColor', 'Color', '#ff0000', false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+inputRange('Type "range"', 'fieldRange', 'fieldRange', '0', '100', '10', false)
+			+inputFile(false, 'Type "file"', 'fieldFile', 'fieldFile', false, 'image/*', false, false, false)
+			+inputCheckbox(false, 'Type "checkbox"', 'fieldCheckbox-1', 'fieldCheckbox-1', false, true, true, false)
+			+inputCheckbox(false, 'Type "checkbox"', 'fieldCheckbox-2', 'fieldCheckbox-2', false, false, true, false)
+			+inputRadio(false, 'Type "radio"', 'fieldRadio-1', 'fieldRadio', false, true, true, false)
+			+inputRadio(false, 'Type "radio"', 'fieldRadio-2', 'fieldRadio', false, false, true, false)
+			+textarea(false, 'Textarea', 'fieldTextarea', 'fieldTextarea', 'Textarea', 10, 500, false, false, false, false, 'form-control')
+			+input(false, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', true, ['Subscribe', 'submit', false, false , false, false])
 
 			h5 Custom fields
-			+input(true, 'text', 'Type "text"', 'fieldText', 'fieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(true, 'email', 'Type "email"', 'fieldEmail', 'fieldEmail', 'Email-Adresse', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(true, 'tel', 'Type "tel"', 'fieldTel', 'fieldTel', 'Telephone', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(true, 'url', 'Type "url"', 'fieldUrl', 'fieldUrl', 'Homepage', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(true, 'password', 'Type "password"', 'fieldPassword', 'fieldPassword', 'Password', false, false, false, false, false, false, false, false, false, false, true, 'form-control')
-			+input(true, 'number', 'Type "number"', 'fieldNumber', 'fieldNumber', 'Number', false, false, '1', '5', false, false, false, false, false, false, true, 'form-control')
+			+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+			+input(true, 'email', 'Type "email"', 'customFieldEmail', 'customFieldEmail', 'Email-Adresse', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+			+input(true, 'tel', 'Type "tel"', 'customFieldTel', 'customFieldTel', 'Telephone', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+			+input(true, 'url', 'Type "url"', 'customFieldUrl', 'customFieldUrl', 'Homepage', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+			+input(true, 'password', 'Type "password"', 'customFieldPassword', 'fieldPassword', 'Password', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+			+input(true, 'number', 'Type "number"', 'customFieldNumber', 'customFieldNumber', 'Number', false, false, '1', '5', false, false, false, false, false, false, true, 'form-control', false, false)
+			+input(true, 'time', 'Type "time"', 'customFieldTime', 'customFieldTime', 'Time', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(true, 'date', 'Type "date"', 'customFieldDate', 'customFieldDate', 'Date', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(true, 'datetime-local', 'Type "datetime-local"', 'customFieldDateTime', 'fieldDateTime', 'DateTime', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(true, 'week', 'Type "week"', 'customFieldWeek', 'customFieldWeek', 'Week', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+input(true, 'month', 'Type "month"', 'customFieldMonth', 'customFieldMonth', 'Month', false, false, false, false, false, false, false, false, false, false, false, 'form-control', false, false)
+			+select(true, 'Select', 'fieldSelect', 'fieldSelect', false, false, false, false, 'form-control', false, ['Select', 'Option 1', 'Option 2', 'Option 3', 'Option 4'])
+			+select(true, 'Select "multiple"', 'fieldSelectMultiple', 'fieldSelectMultiple', false, true, false, false, 'form-control', false, ['Option 1', 'Option 2', 'Option 3', 'Option 4'])
+			+select(true, 'Select "size"', 'fieldSelectSize', 'fieldSelectSize', false, true, '3', false, 'form-control', false, ['Option 1', 'Option 2', 'Option 3', 'Option 4'])
+			+inputFile(true, false, 'customFieldFile', 'customFieldFile', 'en', 'image/*', false, true, 'custom-file__input')
+			+inputCheckbox(true, 'Type "checkbox"', 'customFieldCheckbox-1', 'customFieldCheckbox-1', false, true, true, 'custom-element__input')
+			+inputCheckbox(true, 'Type "checkbox"', 'customFieldCheckbox-2', 'customFieldCheckbox-2', false, false, true, 'custom-element__input')
+			+inputRadio(true, 'Type "radio"', 'customFieldRadio-1', 'customFieldRadio', false, true, true, 'custom-element__input')
+			+inputRadio(true, 'Type "radio"', 'customFieldRadio-2', 'customFieldRadio', false, false, true, 'custom-element__input')
+			+textarea(true, 'Textarea', 'fieldTextarea', 'fieldTextarea', 'Textarea', 10, 500, false, false, false, false, 'form-control')
+			+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', true, ['Subscribe', 'submit', false, false, false, false])
 
+			h5 Rows
+			.form-group-row.row--two-col
+				+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+				+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+			.form-group-row.row--three-col
+				+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+				+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+				+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+			.form-group-row.row--address
+				+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+				+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+			.form-group-row.row--address-revert
+				+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+				+input(true, 'text', 'Type "text"', 'customFieldText', 'customFieldText', 'Muster text', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
 
+			h5 Buttons
+			.buttons-set
+				// mixin button(buttonLabel, buttonType, buttonClass, buttonIcon, buttonIconVariant, buttonIconPosition)
+				+button('Submit','submit', 'btn btn__primary', true, 'icon__twitter', 'right')
+				+button('Reset','reset', 'btn btn__ghost', false , false, false)
+	section
+		h4 Product Grid
+		h5 Mode Grid
+		.product-grid.mode--grid.row
+			.product-grid__wrapper
+				//productItem(productName, productLink, productImg, productDescription, productPrice)
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-01-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-02-thumb.jpg', 'Known for her sculptural takes on traditional tailoring.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-03-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-04-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-05-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-06-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
 
-
-			// mixin button(buttonLabel, buttonType, buttonClass, buttonIcon, buttonIconVariant, buttonIconPosition)
-			+button('Submit','submit', 'btn btn__primary', false , false, false)
-
-
+		h5 Mode List
+		.product-grid.mode--list.row
+			.product-grid__wrapper
+				//productItem(productName, productLink, productImg, productDescription, productPrice)
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-01-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-02-thumb.jpg', 'Known for her sculptural takes on traditional tailoring.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-03-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-04-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-05-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+				+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-06-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
 

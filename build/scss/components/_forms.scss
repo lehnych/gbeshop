@@ -1,6 +1,7 @@
 input[type=text],
 input[type=number],
 input[type=date],
+input[type=time],
 input[type=month],
 input[type=week],
 input[type=datetime-local],
@@ -9,12 +10,13 @@ input[type=email],
 input[type=url],
 input[type=password],
 input[type=search],
-input[type=file],
+input[type=color],
 select,
 select[multiple],
 select[size],
 datalist,
 textarea,
+.custom-file__input,
 .form-control {
 	@include appearance;
 	@include font-size($font-size-s);
@@ -36,6 +38,7 @@ textarea,
 input[type=text],
 input[type=number],
 input[type=date],
+input[type=time],
 input[type=month],
 input[type=week],
 input[type=datetime-local],
@@ -44,14 +47,16 @@ input[type=email],
 input[type=url],
 input[type=password],
 input[type=search],
-input[type=file],
-select:not([multiple]):not([size]) {
+input[type=color],
+select:not([multiple]):not([size]),
+.custom-file__input {
 	height:45px;
 }
 
 input[type=text],
 input[type=number],
 input[type=date],
+input[type=time],
 input[type=month],
 input[type=week],
 input[type=datetime-local],
@@ -60,19 +65,26 @@ input[type=email],
 input[type=url],
 input[type=password],
 input[type=search],
-input[type=file],
+input[type=color],
 select,
 select[multiple],
 select[size],
 datalist,
 textarea,
 button,
+.custom-file__input,
 .form-control {
 	
 	&:focus {
 		outline: none;
 		border: 1px solid $outline-color !important;
 	}
+}
+
+
+select[multiple],
+select[size] {
+	padding: $base-spacing-xxs;
 }
 
 input {
@@ -84,6 +96,11 @@ input {
 	&[type=checkbox],
 	&[type=radio] {
 		margin-right: $base-spacing-xxs;
+		
+		+ label {
+			margin-bottom: 0;
+			display: inline-block;
+		}
 	}
 }
 
@@ -333,13 +350,16 @@ textarea {
 		}
 	}
 	
-	.custom-control {
+	.custom-element {
 		@include position-relative;
 		padding-left: 0;
 		display: block;
 		
-		&.custom--checkbox,
-		&.custom--radio {
+		&__checkbox,
+		&__radio {
+			@include position-relative;
+			padding-left: 0;
+			display: block;
 			margin-bottom: $base-spacing-xxs;
 			
 			input {
@@ -355,11 +375,11 @@ textarea {
 				}
 			}
 			
-			.custom-control__input {
+			.custom-element__input {
 				
 				&:disabled {
 					
-					~ .custom-control__label {
+					~ .custom-element__label {
 						opacity: .25;
 						color: $form-text-color;
 					}
@@ -367,7 +387,7 @@ textarea {
 				
 				&:focus {
 					
-					+ .custom-control__label {
+					+ .custom-element__label {
 						
 						&:before {
 							border: 1px solid $outline-color;
@@ -376,7 +396,7 @@ textarea {
 				}
 			}
 			
-			.custom-control__label {
+			.custom-element__label {
 				@include flexbox;
 				@include align-items(center);
 				@include position-relative;
@@ -432,13 +452,13 @@ textarea {
 			}
 		}
 		
-		&.custom--checkbox {
+		&__checkbox {
 			
-			.custom-control__input {
+			.custom-element__input {
 				
 				&:checked {
 					
-					~ .custom-control__label {
+					~ .custom-element__label {
 						
 						&:after {
 							background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23000000' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
@@ -448,13 +468,13 @@ textarea {
 			}
 		}
 
-		&.custom--radio {
+		&__radio {
 			
-			.custom-control__input {
+			.custom-element__input {
 				
 				&:checked {
 					
-					~ .custom-control__label {
+					~ .custom-element__label {
 						
 						&:after {
 							background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23000000'/%3E%3C/svg%3E");
@@ -463,7 +483,7 @@ textarea {
 				}
 			}
 			
-			.custom-control__label {
+			.custom-element__label {
 				
 				&:before {
 					border-radius: 50%;
@@ -488,12 +508,12 @@ textarea {
 			@include font-size($font-size-s);
 			height: 45px;
 			padding: 0 $base-spacing-xs;
-			display: block;
 			background: none;
 			border: 1px solid $form-border-color;
 			border-left: none;
 			color: $form-text-color;
 			line-height: 43px;
+			text-transform: none;
 		}
 	}
 }
@@ -512,7 +532,7 @@ textarea {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 45px;
+		height: 100%;
 		margin-bottom: 0;
 		padding: 0 $base-spacing-xxs;
 		display: block;
