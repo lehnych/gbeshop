@@ -7,4 +7,133 @@ block variables
 	- var sectionBreadcrumb = true
 
 block maincontent
-	p text
+	section.categorie-options.row
+		.filter-primary
+			.filter-primary__item
+				.filter-primary__item__wrapper
+					.filter-primary__item__header
+						span
+							|Filter
+						span
+							i.icon__filter
+
+					.filter-primary__item__content
+						details
+							summary
+								|Category
+							ul
+								li
+									a(href='#' title='Accessories') Accessories
+								li
+									a(href='#' title='Bags') Bags
+								li
+									a(href='#' title='Denim') Denim
+								li
+									a(href='#' title='Hoodies & Sweatshirts') Hoodies & Sweatshirts
+								li
+									a(href='#' title='Jackets & Coats') Jackets & Coats
+								li
+									a(href='#' title='Polos') Polos
+								li
+									a(href='#' title='Shirts') Shirts
+								li
+									a(href='#' title='Shoes') Shoes
+								li
+									a(href='#' title='Sweaters & Knits') Sweaters & Knits
+								li
+									a(href='#' title='T-Shirts') T-Shirts
+								li
+									a(href='#' title='Tanks') Tanks
+						details
+							summary
+								|Brand
+							ul
+								li
+									a(href='#' title='Brand 1') Brand 1
+								li
+									a(href='#' title='Brand 2') Brand 2
+								li
+									a(href='#' title='Brand 3') Brand 3
+								li
+									a(href='#' title='Brand 4') Brand 4
+						details
+							summary
+								|Designer
+							ul
+								li
+									a(href='#' title='Designer 1') Designer 1
+								li
+									a(href='#' title='Designer 2') Designer 2
+								li
+									a(href='#' title='Designer 3') Designer 3
+								li
+									a(href='#' title='Designer 4') Designer 4
+
+		.filter-secondary
+			.filter-secondary__item.dropdown
+				.dropdown__header.dropdown-toggle(data-bs-target='#filter-secondary-trends' data-bs-toggle='dropdown' aria-expanded='false')
+					span
+						|Trending now
+					span
+						i.icon__angle-down
+				#filter-secondary-trends.dropdown__content.dropdown-menu
+					//inputCheckbox(inputCustom, inputLabel, inputId, inputName, inputValue, inputChecked, inputRequired, inputClass)
+					+inputCheckbox(true, 'Trend 1', 'trend1', 'trend1', false, false, false, 'custom-element__input')
+					+inputCheckbox(true, 'Trend 2', 'trend2', 'trend2', false, false, false, 'custom-element__input')
+					+inputCheckbox(true, 'Trend 3', 'trend3', 'trend3', false, false, false, 'custom-element__input')
+					+inputCheckbox(true, 'Trend 4', 'trend4', 'trend4', false, false, false, 'custom-element__input')
+
+			.filter-secondary__item.dropdown
+				.dropdown__header.dropdown-toggle(data-bs-target='#filter-secondary-size' data-bs-toggle='dropdown' aria-expanded='false')
+					span
+						|Size
+					span
+						i.icon__angle-down
+				#filter-secondary-size.dropdown__content.dropdown-menu
+					+inputCheckbox(true, 'XS', 'sizeXS', 'sizeXS', false, false, false, 'custom-element__input')
+					+inputCheckbox(true, 'S', 'sizeS', 'sizeS', false, false, false, 'custom-element__input')
+					+inputCheckbox(true, 'M', 'sizeM', 'sizeM', false, false, false, 'custom-element__input')
+					+inputCheckbox(true, 'L', 'sizeL', 'sizeL', false, false, false, 'custom-element__input')
+
+			.filter-secondary__item.dropdown
+				.dropdown__header.dropdown-toggle(data-bs-target='#filter-secondary-price' data-bs-toggle='dropdown' aria-expanded='false')
+					span
+						|Price
+					span
+						i.icon__angle-down
+				#filter-secondary-price.dropdown__content.dropdown-menu
+					|content
+
+	section.product-grid.mode--grid.row
+		.product-grid__wrapper
+			//productItem(productName, productLink, productImg, productDescription, productPrice)
+			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-01-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-02-thumb.jpg', 'Known for her sculptural takes on traditional tailoring.', '$52.00')
+			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-03-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-04-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-05-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-06-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-07-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-08-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-09-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
+
+	section.pagination
+		.pagination__wrapper
+			a(href='#' title='back')
+				i.icon__angle-left
+			a.is--active(href='#' title='1')
+				|1
+			a(href='#' title='2')
+				|2
+			a(href='#' title='3')
+				|3
+			a(href='#' title='4')
+				|4
+			a(href='#' title='5')
+				|5
+			a(href='#' title='...')
+				|...
+			a(href='#' title='20')
+				|20
+			a(href='#' title='next')
+				i.icon__angle-right
