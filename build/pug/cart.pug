@@ -6,4 +6,41 @@ block variables
 	- var sectionBreadcrumb = true
 
 block maincontent
-	p text
+	section.cart
+		.cart__wrapper
+			.cart__products
+				h3
+					|Products
+				section.product-grid.mode--list
+					.product-grid__wrapper
+						//productCartItem(productId, productName, productLink, productImg, productColor, productSize, Quantity, productPrice)
+						+productCartItem('01', 'Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-03-thumb.jpg', 'red', 'XL', '2', '$104.00')
+						+productCartItem('02', 'Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-02-thumb.jpg', 'red', 'XL', '2', '$104.00')
+				section.button-set
+					a.btn.btn__ghost--negative
+						|Clear shopping cart
+					a.btn.btn__ghost--negative
+						|Continue shopping
+			.cart__informations
+				section.cart__shipping-address
+					h3
+						|Shipping address
+					form#shipping-address-form
+						.form-group-row.row--two-col
+							+input(true, 'text', 'First Name', 'firstName', 'firstName', 'First Name', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+							+input(true, 'text', 'Last Name', 'lastName', 'lastName', 'Last Name', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+				section.cart__total
+					.cart__total__wrapper
+						.cart__total__item
+							span
+								|Sub total
+							span
+								|$900
+						.cart__total__item.grand--total
+							span
+								|Grand total
+							span
+								|$900
+						hr
+						form
+							+button('Proceed to Checkout','submit', 'btn btn__primary', false , false, false)

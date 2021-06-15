@@ -32,7 +32,85 @@
         </div>
       </section>
       <div class="main__wrapper container">
-        <p>text</p>
+        <section class="cart">
+          <div class="cart__wrapper">
+            <div class="cart__products">
+              <h3>Products</h3>
+              <section class="product-grid mode--list">
+                <div class="product-grid__wrapper">
+                  <!--productCartItem(productId, productName, productLink, productImg, productColor, productSize, Quantity, productPrice)-->
+                  <div class="product-item">
+                    <div class="product-item__wrapper">
+                      <div class="product-item__picture">
+                        <picture><img class="img--fluid" src="img/product/product-m-03-thumb.jpg" alt="Ellery X M'O Capsule"/></picture>
+                      </div>
+                      <div class="product-item__body">
+                        <div class="product-item__decription">
+                          <h4><a href="product.html" title="Ellery X M'O Capsule">Ellery X M'O Capsule</a><a href="#" title="Delete Product from cart"><i class="icon__times"></i></a></h4>
+                          <p class="product-option__color">Color: red</p>
+                          <p class="product-option__size"></p>Size: XL
+                          <p class="product-option__quantity">Quantity:<span class="quantity-field"><span class="quantity-field__minus" data-quantity="minus" data-field="quantity-p-#{productId}">-</span>
+                              <input class="form-control" type="text" id="fieldQuantity#{productId}" name="quantity-p-#{productId}" min="1" max="5" value="2"/><span class="quantity-field__plus" data-quantity="plus" data-field="quantity-p-#{productId}">+</span></span></p>
+                        </div>
+                        <div class="product-item__price"><span class="price--discount">$104.00</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-item__wrapper">
+                      <div class="product-item__picture">
+                        <picture><img class="img--fluid" src="img/product/product-m-02-thumb.jpg" alt="Ellery X M'O Capsule"/></picture>
+                      </div>
+                      <div class="product-item__body">
+                        <div class="product-item__decription">
+                          <h4><a href="product.html" title="Ellery X M'O Capsule">Ellery X M'O Capsule</a><a href="#" title="Delete Product from cart"><i class="icon__times"></i></a></h4>
+                          <p class="product-option__color">Color: red</p>
+                          <p class="product-option__size"></p>Size: XL
+                          <p class="product-option__quantity">Quantity:<span class="quantity-field"><span class="quantity-field__minus" data-quantity="minus" data-field="quantity-p-#{productId}">-</span>
+                              <input class="form-control" type="text" id="fieldQuantity#{productId}" name="quantity-p-#{productId}" min="1" max="5" value="2"/><span class="quantity-field__plus" data-quantity="plus" data-field="quantity-p-#{productId}">+</span></span></p>
+                        </div>
+                        <div class="product-item__price"><span class="price--discount">$104.00</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="button-set"><a class="btn btn__ghost--negative">Clear shopping cart</a><a class="btn btn__ghost--negative">Continue shopping</a></section>
+            </div>
+            <div class="cart__informations">
+              <section class="cart__shipping-address">
+                <h3>Shipping address</h3>
+                <form id="shipping-address-form">
+                  <div class="form-group-row row--two-col">
+                    <div class="form-group">
+                      <div class="form-label-group">
+                        <input class="form-control" type="text" id="firstName" name="firstName" placeholder="First Name" required="required"/>
+                        <label for="firstName">First Name</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-label-group">
+                        <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" required="required"/>
+                        <label for="lastName">Last Name</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </section>
+              <section class="cart__total">
+                <div class="cart__total__wrapper">
+                  <div class="cart__total__item"><span>Sub total</span><span>$900</span></div>
+                  <div class="cart__total__item grand--total"><span>Grand total</span><span>$900</span></div>
+                  <hr>
+                  <form>
+                    <button class="btn btn__primary" type="submit">Proceed to Checkout
+                    </button>
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <footer>
