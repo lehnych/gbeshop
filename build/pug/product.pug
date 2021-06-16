@@ -5,6 +5,7 @@ block variables
 	- var pageTitle = 'New Arrivals'
 	- var catalogType = 'Women'
 	- var sectionBreadcrumb = true
+	- var selfBreadcrumb = true
 	- var sectionProductSlider = true
 	- var sliderPagination = false
 
@@ -41,14 +42,12 @@ block maincontent
 				span
 					|Women Collection
 				|Moschino cheap and chic
-
 			.product-details__description
 				p
 					|Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.</p>
 			.product-details__price
 				span.price--discount
 					|$52.00
-
 			form(action='#' method='post')
 				.product-details__options
 					.product-options__item.dropdown
@@ -58,7 +57,6 @@ block maincontent
 							span
 								i.icon__angle-down
 						#product-option-color.dropdown__content.dropdown-menu
-							//inputCheckbox(inputCustom, inputLabel, inputId, inputName, inputValue, inputChecked, inputRequired, inputClass)
 							+inputCheckbox(true, 'Color 1', 'color1', 'color1', false, false, false, 'custom-element__input')
 							+inputCheckbox(true, 'Color 2', 'color1', 'color2', false, false, false, 'custom-element__input')
 							+inputCheckbox(true, 'Color 3', 'color1', 'color3', false, false, false, 'custom-element__input')
@@ -83,15 +81,10 @@ block maincontent
 							span
 								i.icon__angle-down
 						#product-option-quantity.dropdown__content.dropdown-menu
-							//input(inputCustom, inputType, inputLabel, inputId, inputName, inputPlaceholder, inputValue, inputPattern, inputMin, inputMax, inputMinLength, inputMaxLength, inputAutocomplete, inputAutofocus, inputDisabled, inputReadonly, inputRequired, inputClass, inputCombo, inputComboButtonValues)
 							+input(true, 'number', 'Quantity', 'quantity', 'quantity', 'Quantity', '1', false, '1', '5', false, false, false, false, false, false, true, 'form-control', false, false)
-
-				//button(buttonLabel, buttonType, buttonClass, buttonIcon, buttonIconVariant, buttonIconPosition)
 				+button('Add to Cart','submit', 'btn btn__primary--negative', true, 'icon__cart', 'left')
-
 	section.product-grid.mode--grid.row
 		.product-grid__wrapper
-			//productItem(productName, productLink, productImg, productDescription, productPrice)
 			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-03-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')
 			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-04-thumb.jpg', 'Known for her sculptural takes on traditional tailoring.', '$52.00')
 			+productItem('Ellery X M\'O Capsule', 'product.html', 'img/product/product-w-06-thumb.jpg', 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', '$52.00')

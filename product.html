@@ -14,11 +14,11 @@
         <div class="header__wrapper">
           <div class="header__col">
             <div class="logo"><a href="index.html" title="Shop"><img src="img/logo.png" alt="Shop"></a></div>
-            <div class="search"><a title="Search"><i class="icon__search"></i></a></div>
+            <div class="search"><a href="#" title="Search"><i class="icon__search"></i></a></div>
           </div>
           <div class="header__col">
-            <div class="menu"><a title="Menu"><i class="icon__bars" id="mobile-menu-icon"></i></a></div>
-            <div class="user"><a title="My Account"><i class="icon__user"></i></a></div>
+            <div class="menu"><a href="#" title="Menu"><i class="icon__bars" id="mobile-menu-icon"></i></a></div>
+            <div class="user"><a href="#" title="My Account"><i class="icon__user"></i></a></div>
             <div class="basket"><a href="cart.html" title="My Basket">
                 <div class="basket__count">5</div><i class="icon__cart"></i></a></div>
           </div>
@@ -78,7 +78,6 @@
                 <div class="product-options__item dropdown">
                   <div class="dropdown__header dropdown-toggle" data-bs-target="#product-option-color" data-bs-toggle="dropdown" aria-expanded="false"><span>Choose Color</span><span><i class="icon__angle-down"></i></span></div>
                   <div class="dropdown__content dropdown-menu" id="product-option-color">
-                    <!--inputCheckbox(inputCustom, inputLabel, inputId, inputName, inputValue, inputChecked, inputRequired, inputClass)-->
                     <div class="form-group">
                       <div class="custom-element__checkbox">
                         <input class="custom-element__input" type="checkbox" id="color1" name="color1"/>
@@ -137,7 +136,6 @@
                 <div class="product-options__item dropdown">
                   <div class="dropdown__header dropdown-toggle" data-bs-target="#product-option-quantity" data-bs-toggle="dropdown" aria-expanded="false"><span>Quantity</span><span><i class="icon__angle-down"></i></span></div>
                   <div class="dropdown__content dropdown-menu" id="product-option-quantity">
-                    <!--input(inputCustom, inputType, inputLabel, inputId, inputName, inputPlaceholder, inputValue, inputPattern, inputMin, inputMax, inputMinLength, inputMaxLength, inputAutocomplete, inputAutofocus, inputDisabled, inputReadonly, inputRequired, inputClass, inputCombo, inputComboButtonValues)-->
                     <div class="form-group">
                       <div class="form-label-group">
                         <input class="form-control" type="number" id="quantity" name="quantity" placeholder="Quantity" value="1" min="1" max="5" required="required"/>
@@ -147,7 +145,6 @@
                   </div>
                 </div>
               </div>
-              <!--button(buttonLabel, buttonType, buttonClass, buttonIcon, buttonIconVariant, buttonIconPosition)-->
               <button class="btn btn__primary--negative" type="submit"><i class="icon__cart"></i><span>Add to Cart</span>
               </button>
             </form>
@@ -155,7 +152,6 @@
         </section>
         <section class="product-grid mode--grid row">
           <div class="product-grid__wrapper">
-            <!--productItem(productName, productLink, productImg, productDescription, productPrice)-->
             <div class="product-item">
               <div class="product-item__wrapper">
                 <div class="product-item__picture"><a href="product.html" title="Ellery X M'O Capsule"><span class="btn btn__ghost--negative btn--transparent"><i class="icon__cart"></i>Add to Cart</span></a>
@@ -256,7 +252,6 @@
               <div class="nl-subscribe">
                 <h4>Subscribe<span>For our Newsletter and promotion</span></h4>
                 <form action="" role="form" method="post">
-                  <!--input(inputCustom, inputType, inputLabel, inputId, inputName, inputPlaceholder, inputValue, inputPattern, inputMin, inputMax, inputMinLength, inputMaxLength, inputAutocomplete, inputAutofocus, inputDisabled, inputReadonly, inputRequired, inputClass, inputCombo, inputComboButtonValues)-->
                   <div class="form-group group--combo">
                     <div class="form-label-group">
                       <input class="form-control" type="email" id="nlemail" name="nlemail" placeholder="Enter Your Email" required="required"/>
@@ -282,6 +277,38 @@
         </div>
       </div>
     </footer>
+    <nav id="mobile-menu-bar">
+      <div id="mobile-menu-header"><span>Menu</span><i class="icon__times"></i></div>
+      <ul id="mobile-menu">
+        <li class="level-1"><a href="#" title="#{val}">Men</a>
+          <ul>
+            <li class="level-2"><a href="#" title="#{val}">Accessories</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Bags</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Denim</a></li>
+            <li class="level-2"><a href="#" title="#{val}">T-Shirts</a></li>
+          </ul>
+        </li>
+        <li class="level-1"><a href="#" title="#{val}">Woman</a>
+          <ul>
+            <li class="level-2"><a href="#" title="#{val}">Accessories</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Jackets &amp; Coats</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Polos</a></li>
+            <li class="level-2"><a href="#" title="#{val}">T-Shirts</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Shirts</a></li>
+          </ul>
+        </li>
+        <li class="level-1"><a href="#" title="#{val}">Kids</a>
+          <ul>
+            <li class="level-2"><a href="#" title="#{val}">Accessories</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Jackets &amp; Coats</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Polos</a></li>
+            <li class="level-2"><a href="#" title="#{val}">T-Shirts</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Shirts</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Bags</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </div>
   <script type="text/javascript" src="js/script.min.js"></script>
 </body>

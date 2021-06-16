@@ -45,6 +45,10 @@
 			opacity: 0;
 			background: rgba($color-black, .7);
 			text-decoration: none;
+			
+			.btn--transparent:hover {
+				background: rgba($color-white, .2) !important;
+			}
 		}
 		
 		&:hover {

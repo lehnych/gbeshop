@@ -14,11 +14,11 @@
         <div class="header__wrapper">
           <div class="header__col">
             <div class="logo"><a href="index.html" title="Shop"><img src="img/logo.png" alt="Shop"></a></div>
-            <div class="search"><a title="Search"><i class="icon__search"></i></a></div>
+            <div class="search"><a href="#" title="Search"><i class="icon__search"></i></a></div>
           </div>
           <div class="header__col">
-            <div class="menu"><a title="Menu"><i class="icon__bars" id="mobile-menu-icon"></i></a></div>
-            <div class="user"><a title="My Account"><i class="icon__user"></i></a></div>
+            <div class="menu"><a href="#" title="Menu"><i class="icon__bars" id="mobile-menu-icon"></i></a></div>
+            <div class="user"><a href="#" title="My Account"><i class="icon__user"></i></a></div>
             <div class="basket"><a href="cart.html" title="My Basket">
                 <div class="basket__count">5</div><i class="icon__cart"></i></a></div>
           </div>
@@ -46,35 +46,35 @@
                   <details>
                     <summary>Category</summary>
                     <ul>
-                      <li><a href="#" title="Accessories">Accessories</a></li>
-                      <li><a href="#" title="Bags">Bags</a></li>
-                      <li><a href="#" title="Denim">Denim</a></li>
-                      <li><a href="#" title="Hoodies &amp; Sweatshirts">Hoodies & Sweatshirts</a></li>
-                      <li><a href="#" title="Jackets &amp; Coats">Jackets & Coats</a></li>
-                      <li><a href="#" title="Polos">Polos</a></li>
-                      <li><a href="#" title="Shirts">Shirts</a></li>
-                      <li><a href="#" title="Shoes">Shoes</a></li>
-                      <li><a href="#" title="Sweaters &amp; Knits">Sweaters & Knits</a></li>
-                      <li><a href="#" title="T-Shirts">T-Shirts</a></li>
-                      <li><a href="#" title="Tanks">Tanks</a></li>
+                      <li><a href="#" title="#{val}">Accessories</a></li>
+                      <li><a href="#" title="#{val}">Bags</a></li>
+                      <li><a href="#" title="#{val}">Denim</a></li>
+                      <li><a href="#" title="#{val}">Hoodies &amp; Sweatshirts</a></li>
+                      <li><a href="#" title="#{val}">Jackets &amp; Coats</a></li>
+                      <li><a href="#" title="#{val}">Polos</a></li>
+                      <li><a href="#" title="#{val}">Shirts</a></li>
+                      <li><a href="#" title="#{val}">Shoes</a></li>
+                      <li><a href="#" title="#{val}">Sweaters &amp; Knits</a></li>
+                      <li><a href="#" title="#{val}">T-Shirts</a></li>
+                      <li><a href="#" title="#{val}">Tanks</a></li>
                     </ul>
                   </details>
                   <details>
                     <summary>Brand</summary>
                     <ul>
-                      <li><a href="#" title="Brand 1">Brand 1</a></li>
-                      <li><a href="#" title="Brand 2">Brand 2</a></li>
-                      <li><a href="#" title="Brand 3">Brand 3</a></li>
-                      <li><a href="#" title="Brand 4">Brand 4</a></li>
+                      <li><a href="#" title="#{val}">Brand 1</a></li>
+                      <li><a href="#" title="#{val}">Brand 2</a></li>
+                      <li><a href="#" title="#{val}">Brand 3</a></li>
+                      <li><a href="#" title="#{val}">Brand 4</a></li>
                     </ul>
                   </details>
                   <details>
                     <summary>Designer</summary>
                     <ul>
-                      <li><a href="#" title="Designer 1">Designer 1</a></li>
-                      <li><a href="#" title="Designer 2">Designer 2</a></li>
-                      <li><a href="#" title="Designer 3">Designer 3</a></li>
-                      <li><a href="#" title="Designer 4">Designer 4</a></li>
+                      <li><a href="#" title="#{val}">Designer 1</a></li>
+                      <li><a href="#" title="#{val}">Designer 2</a></li>
+                      <li><a href="#" title="#{val}">Designer 3</a></li>
+                      <li><a href="#" title="#{val}">Designer 4</a></li>
                     </ul>
                   </details>
                 </div>
@@ -85,7 +85,6 @@
             <div class="filter-secondary__item dropdown">
               <div class="dropdown__header dropdown-toggle" data-bs-target="#filter-secondary-trends" data-bs-toggle="dropdown" aria-expanded="false"><span>Trending now</span><span><i class="icon__angle-down"></i></span></div>
               <div class="dropdown__content dropdown-menu" id="filter-secondary-trends">
-                <!--inputCheckbox(inputCustom, inputLabel, inputId, inputName, inputValue, inputChecked, inputRequired, inputClass)-->
                 <div class="form-group">
                   <div class="custom-element__checkbox">
                     <input class="custom-element__input" type="checkbox" id="trend1" name="trend1"/>
@@ -149,7 +148,6 @@
         </section>
         <section class="product-grid mode--grid row">
           <div class="product-grid__wrapper">
-            <!--productItem(productName, productLink, productImg, productDescription, productPrice)-->
             <div class="product-item">
               <div class="product-item__wrapper">
                 <div class="product-item__picture"><a href="product.html" title="Ellery X M'O Capsule"><span class="btn btn__ghost--negative btn--transparent"><i class="icon__cart"></i>Add to Cart</span></a>
@@ -337,7 +335,6 @@
               <div class="nl-subscribe">
                 <h4>Subscribe<span>For our Newsletter and promotion</span></h4>
                 <form action="" role="form" method="post">
-                  <!--input(inputCustom, inputType, inputLabel, inputId, inputName, inputPlaceholder, inputValue, inputPattern, inputMin, inputMax, inputMinLength, inputMaxLength, inputAutocomplete, inputAutofocus, inputDisabled, inputReadonly, inputRequired, inputClass, inputCombo, inputComboButtonValues)-->
                   <div class="form-group group--combo">
                     <div class="form-label-group">
                       <input class="form-control" type="email" id="nlemail" name="nlemail" placeholder="Enter Your Email" required="required"/>
@@ -363,6 +360,38 @@
         </div>
       </div>
     </footer>
+    <nav id="mobile-menu-bar">
+      <div id="mobile-menu-header"><span>Menu</span><i class="icon__times"></i></div>
+      <ul id="mobile-menu">
+        <li class="level-1"><a href="#" title="#{val}">Men</a>
+          <ul>
+            <li class="level-2"><a href="#" title="#{val}">Accessories</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Bags</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Denim</a></li>
+            <li class="level-2"><a href="#" title="#{val}">T-Shirts</a></li>
+          </ul>
+        </li>
+        <li class="level-1"><a href="#" title="#{val}">Woman</a>
+          <ul>
+            <li class="level-2"><a href="#" title="#{val}">Accessories</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Jackets &amp; Coats</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Polos</a></li>
+            <li class="level-2"><a href="#" title="#{val}">T-Shirts</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Shirts</a></li>
+          </ul>
+        </li>
+        <li class="level-1"><a href="#" title="#{val}">Kids</a>
+          <ul>
+            <li class="level-2"><a href="#" title="#{val}">Accessories</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Jackets &amp; Coats</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Polos</a></li>
+            <li class="level-2"><a href="#" title="#{val}">T-Shirts</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Shirts</a></li>
+            <li class="level-2"><a href="#" title="#{val}">Bags</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </div>
   <script type="text/javascript" src="js/script.min.js"></script>
 </body>

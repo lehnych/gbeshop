@@ -106,7 +106,13 @@ footer {
 						margin-bottom: 0;
 						
 						&.group--combo {
+							@include transition(box-shadow 0.4s ease);
+							border-radius: 22.5px;
 							position: relative;
+							
+							&:hover {
+								@include box-shadow(0px 0px 5px 0px rgba($color-black, 0.4));
+							}
 							
 							label {
 								color: $form-text-color;
@@ -122,11 +128,17 @@ footer {
 							}
 							
 							button {
+								@include transition(background 0.4s ease);
 								background: $deco-color;
 								border: none;
 								border-top-right-radius: 22.5px;
 								border-bottom-right-radius: 22.5px;
+								/*cursor: pointer;*/
 								color: $color-white;
+								
+								&:hover {
+									background: $deco-color-dark;
+								}
 							}
 						}
 					}
@@ -144,6 +156,7 @@ footer {
 					@include flexbox;
 					@include align-items(center);
 					@include justify-content(center);
+					@include transition(all 0.4s ease);
 					width: 32px;
 					height: 32px;
 					background: $color-white;

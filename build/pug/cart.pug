@@ -1,35 +1,44 @@
 extends layout/base
 
 block variables
-	- var pageMetaTitle = 'Cart'
+	- var pageMetaTitle = 'Shopping cart'
 	- var pageTitle = 'Cart'
 	- var sectionBreadcrumb = true
 
 block maincontent
 	section.cart
 		.cart__wrapper
-			.cart__products
+			.cart__col
 				h3
 					|Products
-				section.product-grid.mode--list
+				.product-grid.mode--list
 					.product-grid__wrapper
-						//productCartItem(productId, productName, productLink, productImg, productColor, productSize, Quantity, productPrice)
-						+productCartItem('01', 'Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-03-thumb.jpg', 'red', 'XL', '2', '$104.00')
-						+productCartItem('02', 'Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-02-thumb.jpg', 'red', 'XL', '2', '$104.00')
-				section.button-set
-					a.btn.btn__ghost--negative
+						+productCartItem('1', 'Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-03-thumb.jpg', 'red', 'XL', '2', '$104.00')
+						+productCartItem('2', 'Ellery X M\'O Capsule', 'product.html', 'img/product/product-m-02-thumb.jpg', 'red', 'XL', '2', '$104.00')
+				.button-set
+					a.btn.btn__ghost--negative(href='#' title='Clear shopping cart')
 						|Clear shopping cart
-					a.btn.btn__ghost--negative
+					a.btn.btn__ghost--negative(href='#' title='Continue shopping')
 						|Continue shopping
-			.cart__informations
-				section.cart__shipping-address
+			.cart__col
+				.cart__shipping-address
 					h3
 						|Shipping address
 					form#shipping-address-form
 						.form-group-row.row--two-col
 							+input(true, 'text', 'First Name', 'firstName', 'firstName', 'First Name', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
 							+input(true, 'text', 'Last Name', 'lastName', 'lastName', 'Last Name', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
-				section.cart__total
+						+input(true, 'email', 'E-mail', 'email', 'email', 'E-mail', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+						+input(true, 'tel', 'Phone', 'tel', 'tel', 'Phone', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+						.form-group-row.row--two-col
+							+input(true, 'text', 'Street', 'street', 'street', 'Street', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+							+input(true, 'number', 'House Nr.', 'houseNr', 'houseNr', 'House Nr.', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+						.form-group-row.row--two-col
+							+input(true, 'text', 'City', 'city', 'city', 'City', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+							+input(true, 'number', 'Zip', 'zip', 'zip', 'Zip', false, false, false, false, false, false, false, false, false, false, true, 'form-control', false, false)
+						+select(true, 'Country', 'country', 'country', false, false, false, false, 'form-control', false, ['Select', 'Germany', 'Russia', 'USA'])
+						+button('Get a qutet','submit', 'btn btn__ghost--negative', false , false, false)
+				.cart__total
 					.cart__total__wrapper
 						.cart__total__item
 							span
@@ -42,5 +51,5 @@ block maincontent
 							span
 								|$900
 						hr
-						form
-							+button('Proceed to Checkout','submit', 'btn btn__primary', false , false, false)
+						a.btn.btn__primary(href='registration.html' title='Registration')
+							|Proceed to Checkout

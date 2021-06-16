@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Shopping cart</title>
+  <title>Registration</title>
   <link rel="stylesheet" type="text/css" href="css/styles.min.css">
 </head>
 <body>
@@ -28,132 +28,119 @@
     <main>
       <section class="breadcrumb">
         <div class="breadcrumb__wrapper container">
-          <h1>Cart</h1>
+          <h1>Registration</h1>
         </div>
       </section>
       <div class="main__wrapper container">
-        <section class="cart">
-          <div class="cart__wrapper">
-            <div class="cart__col">
-              <h3>Products</h3>
-              <div class="product-grid mode--list">
-                <div class="product-grid__wrapper">
-                  <div class="product-item">
-                    <div class="product-item__wrapper">
-                      <div class="product-item__picture">
-                        <picture><img class="img--fluid" src="img/product/product-m-03-thumb.jpg" alt="Ellery X M'O Capsule"/></picture>
-                      </div>
-                      <div class="product-item__body">
-                        <div class="product-item__decription">
-                          <h4><a href="product.html" title="Ellery X M'O Capsule">Ellery X M'O Capsule</a><a href="#" title="Delete Product from cart"><i class="icon__times"></i></a></h4>
-                          <p class="product-option__color">Color: red</p>
-                          <p class="product-option__size"></p>Size: XL
-                          <p class="product-option__quantity">Quantity:<span class="quantity-field"><span class="quantity-field__minus" data-quantity="minus" data-field="quantity-p-1">-</span>
-                              <input class="form-control" type="text" id="fieldQuantity#{productId}" name="quantity-p-1" min="1" max="5" value="2"/><span class="quantity-field__plus" data-quantity="plus" data-field="quantity-p-1">+</span></span></p>
-                        </div>
-                        <div class="product-item__price"><span class="price--discount">$104.00</span></div>
-                      </div>
+        <section class="registration">
+          <div class="registration__wrapper">
+            <div class="registration__col">
+              <form>
+                <h3>Your address</h3>
+                <div class="form-group-row row--two-col">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input class="form-control" type="text" id="firstName" name="firstName" placeholder="First Name" required="required"/>
+                      <label for="firstName">First Name</label>
                     </div>
                   </div>
-                  <div class="product-item">
-                    <div class="product-item__wrapper">
-                      <div class="product-item__picture">
-                        <picture><img class="img--fluid" src="img/product/product-m-02-thumb.jpg" alt="Ellery X M'O Capsule"/></picture>
-                      </div>
-                      <div class="product-item__body">
-                        <div class="product-item__decription">
-                          <h4><a href="product.html" title="Ellery X M'O Capsule">Ellery X M'O Capsule</a><a href="#" title="Delete Product from cart"><i class="icon__times"></i></a></h4>
-                          <p class="product-option__color">Color: red</p>
-                          <p class="product-option__size"></p>Size: XL
-                          <p class="product-option__quantity">Quantity:<span class="quantity-field"><span class="quantity-field__minus" data-quantity="minus" data-field="quantity-p-2">-</span>
-                              <input class="form-control" type="text" id="fieldQuantity#{productId}" name="quantity-p-2" min="1" max="5" value="2"/><span class="quantity-field__plus" data-quantity="plus" data-field="quantity-p-2">+</span></span></p>
-                        </div>
-                        <div class="product-item__price"><span class="price--discount">$104.00</span></div>
-                      </div>
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" required="required"/>
+                      <label for="lastName">Last Name</label>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="button-set"><a class="btn btn__ghost--negative" href="#" title="Clear shopping cart">Clear shopping cart</a><a class="btn btn__ghost--negative" href="#" title="Continue shopping">Continue shopping</a></div>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input class="form-control" type="email" id="email" name="email" placeholder="E-mail" required="required"/>
+                    <label for="email">E-mail</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input class="form-control" type="tel" id="tel" name="tel" placeholder="Phone" required="required"/>
+                    <label for="tel">Phone</label>
+                  </div>
+                </div>
+                <div class="form-group-row row--two-col">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input class="form-control" type="text" id="street" name="street" placeholder="Street" required="required"/>
+                      <label for="street">Street</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input class="form-control" type="number" id="houseNr" name="houseNr" placeholder="House Nr." required="required"/>
+                      <label for="houseNr">House Nr.</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group-row row--two-col">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input class="form-control" type="text" id="city" name="city" placeholder="City" required="required"/>
+                      <label for="city">City</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input class="form-control" type="number" id="zip" name="zip" placeholder="Zip" required="required"/>
+                      <label for="zip">Zip</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="country">Country</label>
+                  <select class="form-control custom-select" id="country" name="country">
+                    <option value="Select" disabled="disabled">Select</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Russia">Russia</option>
+                    <option value="USA">USA</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <div class="custom-element__radio">
+                    <input class="custom-element__input" type="radio" id="genderMale" name="gender" checked="checked" required="required"/>
+                    <label class="custom-element__label" for="genderMale">Male</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="custom-element__radio">
+                    <input class="custom-element__input" type="radio" id="genderFemale" name="gender" required="required"/>
+                    <label class="custom-element__label" for="genderFemale">Female</label>
+                  </div>
+                </div>
+                <h3>Login details</h3>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input class="form-control" type="password" id="password" name="password" placeholder="Password" required="required"/>
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input class="form-control" type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Password confirm" required="required"/>
+                    <label for="passwordConfirm">Password confirm</label>
+                  </div>
+                </div>
+                <button class="btn btn btn__primary" type="submit"><span>Join now</span><i class="icon__long-arrow-right"></i>
+                </button>
+              </form>
             </div>
-            <div class="cart__col">
-              <div class="cart__shipping-address">
-                <h3>Shipping address</h3>
-                <form id="shipping-address-form">
-                  <div class="form-group-row row--two-col">
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input class="form-control" type="text" id="firstName" name="firstName" placeholder="First Name" required="required"/>
-                        <label for="firstName">First Name</label>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" required="required"/>
-                        <label for="lastName">Last Name</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label-group">
-                      <input class="form-control" type="email" id="email" name="email" placeholder="E-mail" required="required"/>
-                      <label for="email">E-mail</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label-group">
-                      <input class="form-control" type="tel" id="tel" name="tel" placeholder="Phone" required="required"/>
-                      <label for="tel">Phone</label>
-                    </div>
-                  </div>
-                  <div class="form-group-row row--two-col">
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input class="form-control" type="text" id="street" name="street" placeholder="Street" required="required"/>
-                        <label for="street">Street</label>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input class="form-control" type="number" id="houseNr" name="houseNr" placeholder="House Nr." required="required"/>
-                        <label for="houseNr">House Nr.</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group-row row--two-col">
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input class="form-control" type="text" id="city" name="city" placeholder="City" required="required"/>
-                        <label for="city">City</label>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input class="form-control" type="number" id="zip" name="zip" placeholder="Zip" required="required"/>
-                        <label for="zip">Zip</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="country">Country</label>
-                    <select class="form-control custom-select" id="country" name="country">
-                      <option value="Select" disabled="disabled">Select</option>
-                      <option value="Germany">Germany</option>
-                      <option value="Russia">Russia</option>
-                      <option value="USA">USA</option>
-                    </select>
-                  </div>
-                  <button class="btn btn__ghost--negative" type="submit">Get a qutet
-                  </button>
-                </form>
-              </div>
-              <div class="cart__total">
-                <div class="cart__total__wrapper">
-                  <div class="cart__total__item"><span>Sub total</span><span>$900</span></div>
-                  <div class="cart__total__item grand--total"><span>Grand total</span><span>$900</span></div>
-                  <hr><a class="btn btn__primary" href="registration.html" title="Registration">Proceed to Checkout</a>
-                </div>
-              </div>
+            <div class="registration__col">
+              <h2>Loyalty has its perks</h2>
+              <p>Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
+              <ul class="check aos-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in-out">
+                <li class="aos-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in-out">15% off welcome offer</li>
+                <li class="aos-item" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500" data-aos-easing="ease-in-out">
+                  <Free>shipping, returns and exchanges on all orders</Free>
+                </li>
+                <li class="aos-item" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="500" data-aos-easing="ease-in-out">$10 off a purchase on your birthday</li>
+                <li class="aos-item" data-aos="fade-left" data-aos-duration="2500" data-aos-delay="500" data-aos-easing="ease-in-out">Early access to products</li>
+                <li class="aos-item" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="500" data-aos-easing="ease-in-out">Exclusive offers & rewards</li>
+              </ul>
             </div>
           </div>
         </section>

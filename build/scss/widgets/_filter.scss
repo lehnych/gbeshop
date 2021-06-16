@@ -25,14 +25,6 @@
 			
 			&.is--active {
 				color: $deco-color-dark;
-				
-				svg {
-					fill: $deco-color-dark;
-					
-					path {
-						fill: $deco-color-dark;
-					}
-				}
 			}
 		}
 		
@@ -56,6 +48,7 @@
 					padding: $base-spacing-xxs;
 					border-left: 3px solid $deco-color-dark;
 					border-bottom: 1px solid rgba($border-color, .3);
+					cursor: pointer;
 					list-style: none;
 					font-weight: $font-weight-regular;
 					text-transform: uppercase;

@@ -9,6 +9,7 @@ module.exports = {
             'catalog.html': 'build/pug/catalog.pug',
             'product.html': 'build/pug/product.pug',
             'cart.html': 'build/pug/cart.pug',
+            'registration.html': 'build/pug/registration.pug',
         }
     }
 };

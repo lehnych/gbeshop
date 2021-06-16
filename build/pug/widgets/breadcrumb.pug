@@ -1,8 +1,10 @@
+- var pageTitle = pageTitle
+
 section.breadcrumb
 	.breadcrumb__wrapper.container
 		h1
 			|#{pageTitle}
-		if pageMetaTitle != 'Cart'
+		if selfBreadcrumb
 			ul
 				li
 					a(href='index.html' title='Home') Home

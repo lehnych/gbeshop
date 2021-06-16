@@ -24,8 +24,13 @@ header {
 			
 			[class^="icon__"],
 			[class*=" icon__"] {
+				@include transition(color 0.4s ease);
 				@include font-size(30px);
 				color: $color-white;
+				
+				&:hover {
+					color: $deco-color;
+				}
 			}
 			
 			.user {
