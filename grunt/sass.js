@@ -8,8 +8,8 @@ module.exports = {
     },
     theme: {
         files: {
-            'css/styles.min.css': [
-                'build/scss/style.scss'
+            'dist/css/styles.min.css': [
+                'app/scss/style.scss'
             ]
         }
     }

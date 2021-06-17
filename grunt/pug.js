@@ -4,12 +4,12 @@ module.exports = {
             pretty: true,
         },
         files: {
-            'elements.html': 'build/pug/elements.pug',
-            'index.html': 'build/pug/index.pug',
-            'catalog.html': 'build/pug/catalog.pug',
-            'product.html': 'build/pug/product.pug',
-            'cart.html': 'build/pug/cart.pug',
-            'registration.html': 'build/pug/registration.pug',
+            'dist/elements.html':     'app/pug/elements.pug',
+            'dist/index.html':        'app/pug/index.pug',
+            'dist/catalog.html':      'app/pug/catalog.pug',
+            'dist/product.html':      'app/pug/product.pug',
+            'dist/cart.html':         'app/pug/cart.pug',
+            'dist/registration.html': 'app/pug/registration.pug',
         }
     }
 };

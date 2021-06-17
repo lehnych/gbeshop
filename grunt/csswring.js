@@ -8,10 +8,10 @@ module.exports = function (grunt, options) {
 
         vendor: {
             src: [
-                'css/styles.min.css'
+                'app/css/styles.min.css'
             ],
 
-            dest: 'css/styles.min.css'
+            dest: 'dist/css/styles.min.css'
         }
     };
 };

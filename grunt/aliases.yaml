@@ -12,6 +12,7 @@ development:
   - 'sass:theme'
   - 'uglify:theme'
   - 'csswring:vendor'
+  - 'pug'
 
 default:
   - 'production'
