@@ -24,6 +24,7 @@
 			line-height: 15px;
 			text-align: center;
 			
+			&:hover,
 			&.is--active {
 				color: $deco-color;
 			}

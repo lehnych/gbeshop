@@ -30,9 +30,12 @@
 		z-index: 1;
 		
 		.form-group {
-			margin-bottom: 0;
 			
-			.custom-control {
+			&:last-child {
+				margin-bottom: 0;
+			}
+			
+			.custom-element {
 				
 				&.custom--checkbox,
 				&.custom--radio {
