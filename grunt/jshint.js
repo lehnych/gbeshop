@@ -16,6 +16,6 @@ module.exports = {
     },
 
     theme: {
-        src: [ 'build/js/*.js' ]
+        src: [ 'app/js/*.js' ]
     }
 };

@@ -4,8 +4,18 @@ module.exports = {
             {
                 expand: true,
                 src: '**/*',
-                cwd: 'build/fonts/',
-                dest: 'fonts'
+                cwd: 'app/fonts/',
+                dest: 'dist/fonts'
+            }
+        ]
+    },
+    images: {
+        files: [
+            {
+                expand: true,
+                src: '**/*',
+                cwd: 'app/img/',
+                dest: 'dist/img'
             }
         ]
     }

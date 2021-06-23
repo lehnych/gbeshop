@@ -1,9 +1,10 @@
 production:
-  - 'copy'
   - 'jshint:theme'
   - 'sass:theme'
   - 'uglify:theme'
   - 'csswring:vendor'
+  - 'pug'
+  - 'copy'
   - 'watch'
 
 development:
@@ -11,6 +12,7 @@ development:
   - 'sass:theme'
   - 'uglify:theme'
   - 'csswring:vendor'
+  - 'pug'
 
 default:
   - 'production'

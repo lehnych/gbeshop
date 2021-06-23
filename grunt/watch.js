@@ -1,7 +1,7 @@
 module.exports = {
 
     development: {
-        files: [ 'build/**/*.js', 'build/**/*.scss' ],
+        files: [ 'app/**/*.js', 'app/**/*.scss', 'app/**/*.pug' ],
         tasks: [ 'development' ],
         options: {
             livereload: true
